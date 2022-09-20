@@ -8,6 +8,7 @@ from skimage import feature
 from scipy.ndimage import maximum_filter, minimum_filter, gaussian_filter, sobel
 from scipy.signal import convolve2d, gaussian
 from PIL import Image
+from matplotlib.pyplot import imsave
 
 
 class SmartImage:
@@ -113,14 +114,14 @@ class SmartImage:
         self.img = self.img + alpha * (self.img - blurred)
         return self
 
-    def convolve_filter(self, kernel):
+    def convolve_filter(self, kernel=gaussian_kernel()):
         self.img = convolve2d(self.img, kernel, 'same', boundary='fill',
                               fillvalue=0)
         return self
 
     def save(self):
-        im = Image.fromarray(self.img)
-        im.save("../DIB-FrontEnd/src/assets/output/output.png")
+        imsave("../DIB-FrontEnd/src/assets/output/output.png",
+               self.img, cmap='gray')
 
 
 def edgeArray(img: SmartImage):
