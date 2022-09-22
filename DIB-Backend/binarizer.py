@@ -7,28 +7,22 @@ from SetOperation import SetOperation
 
 
 index = (int)(sys.argv[1]) - 1
-original, ideal = getImages()
-im = ideal[index]
+im = getImages()[index]
+
 
 # def method(im):
-#     contrast = SmartImage(im).rgb2gray().contrast_gradient()
+#     contrast = SmartImage(im).contrast_gradient()
 #     otsu = SmartImage(contrast.img).otsu()
-#     canny = SmartImage(im).rgb2gray().canny()
-#     return SmartImage(otsu.img & canny.img)
+#     canny = SmartImage(im).canny()
+#     return SmartImage(otsu.img & canny.img).invert()
 
 
-dim = 17
-B = [[1 for i in range(dim)] for j in range(dim)]
+dim = 11
+B = [[1] * dim for j in range(dim)]
+
+smartImage = SmartImage(im.img)
+smartImage.binarize()
 
 
-def dilate(): return im + B
-def erode(): return im - B
-
-
-def open(): return (im - B) + B
-def close(): return (im + B) - B
-
-
-img = erode()
-
-img.save()
+# dilated = smartImage - B
+# dilated.save()
