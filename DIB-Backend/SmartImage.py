@@ -1,3 +1,4 @@
+from re import X
 import numpy as np
 from math import sqrt
 from numpy.fft import fft2, ifft2
@@ -30,18 +31,45 @@ import time
 # rr, cc = disk((half, half), quart, shape=shape)
 # img[rr, cc] = 1
 
-def convolve(func):
+def convolve2(func):
     def wrapper(smartImage, B):
         img = smartImage.img
-        length = len(img)
-        width = len(img[0])
         hw = (int)((len(B) - 1) / 2)
         hh = (int)((len(B[0]) - 1) / 2)
+        length, width = len(img), len(img[0])
         B = np.array(B)
 
         retVal = np.zeros([length, width])
 
         start = time.perf_counter()
+
+        huh = [arr[i - 3: i + 3] for i, arr in enumerate(img)]
+        print(huh)
+        # for row in range(hh, length - hh):
+        #     for pixel in range(hw, width - hw):
+        #         result = func([arr[pixel-hh:pixel+hh+1]
+        #                        for arr in img[row-hw:row+hw+1]], B)
+        #         if result:
+        #             retVal[row][pixel] = 1
+
+        end = time.perf_counter()
+        print(end - start)
+        return SmartImage(retVal)
+    return wrapper
+
+
+def convolve(func):
+    def wrapper(smartImage, B):
+        img = smartImage.img
+        hw = (int)((len(B) - 1) / 2)
+        hh = (int)((len(B[0]) - 1) / 2)
+        length, width = len(img), len(img[0])
+        B = np.array(B)
+
+        retVal = np.zeros([length, width])
+
+        start = time.perf_counter()
+
         for row in range(hh, length - hh):
             for pixel in range(hw, width - hw):
                 result = func([arr[pixel-hh:pixel+hh+1]
@@ -58,80 +86,81 @@ def convolve(func):
 class SmartImage:
     def __init__(self, img: np.ndarray):
         try:
-            self.img = rgb2gray(img)
+            self.img = self.rgb2gray(img).img
         except:
             self.img = img
 
     def binarize(self):
+        self.wiener()
         contrast = SmartImage(self.img).contrast_gradient()
         canny = SmartImage(self.img).canny()
-        (canny.img & contrast.img).save()
-        # contrast = self.contrast_gradient()
-        # otsu = self.otsu().save()
-        # canny = self.canny().save()
+        otsu = SmartImage(self.img).otsu().invert()
+        (contrast & canny | otsu).invert().save()
+
+    def gaussian_kernel(kernel_size=3):
+        h = gaussian(kernel_size, kernel_size / 3).reshape(kernel_size, 1)
+        h = np.dot(h, h.transpose())
+        h /= np.sum(h)
+        return h
+
+    def wiener(self, kernel=gaussian_kernel(), K=10):
+        # normalise kernel
+        kernel /= np.sum(kernel)
+        # fft of spatial degradation
+        kernel = fft2(kernel, s=self.img.shape)
+        # core formula for wiener
+        kernel = np.conj(kernel) / (np.abs(kernel) ** 2 + K)
+        # fft of copy of image
+        copy = fft2(np.copy(self.img))
+        # calculate g(x) = f(x) * h(x)
+        copy *= kernel
+        # return to spatial domain
+        self.img = np.abs(ifft2(copy))
+        return self
 
     # dilation
-    @convolve
+    # @convolve
+    @convolve2
     def __add__(smartImage, B):
         return np.mean(np.logical_and(smartImage, B)) > 0
 
-    # erosion
+        # erosion
     @convolve
     def __sub__(smartImage, B):
         return np.mean(np.logical_and(smartImage, B)) == 1
 
-    def contrast_gradient(self, power=1):
+    def __and__(self, smartImage):
+        return SmartImage(self.img & smartImage.img)
+
+    def __or__(self, smartImage):
+        return SmartImage(self.img | smartImage.img)
+
+    def contrast_gradient(self, power=1, thresh=0.1):
         alpha = sqrt(np.var(self.img) / 128) ** power
         epsilon = 0.00001 * np.ones(self.img.shape)
         Max = maximum_filter(self.img, size=3)
         Min = minimum_filter(self.img, size=3)
         dif = (Max - Min)
         self.img = alpha * (dif / (Max + Min + epsilon)) + (1 - alpha) * dif
+        self.img[self.img >= thresh] = 1
+        self.img[self.img < thresh] = 0
+        self.img = self.img.astype(int)
         return self
 
-    def rgb2gray(self):
-        self.img = rgb2gray(self.img)
-        return self
-
-    def gray2rgb(self):
-        self.img = gray2rgb(self.img)
-        return self
-
-    def denoise(self):
-        try:
-            self.img = denoise_bilateral(self.img, channel_axis=-1)
-        except:
-            self.img = denoise_bilateral(self.img)
-        return self
-
-    def sauvola(self):
-        self.img = self.img > threshold_sauvola(self.img)
+    def rgb2gray(self, img):
+        self.img = rgb2gray(img)
         return self
 
     def otsu(self):
-        self.img = self.img > threshold_otsu(self.img)
-        return self
-
-    def meanThreshold(self):
-        self.img = self.img > threshold_mean(self.img)
+        self.img = (self.img > threshold_otsu(self.img)).astype(int)
         return self
 
     def canny(self):
-        self.img = feature.canny(self.img)
-        return self
-
-    def sobel(self, axis=0):
-        self.img = sobel(self.img, axis)
-        return self
-
-    def sobelMag(self):
-        xdir = sobel(self.img, axis=0, mode='constant')
-        ydir = sobel(self.img, axis=1, mode='constant')
-        # self.img = np.hypot(xdir, ydir)
+        self.img = feature.canny(self.img).astype(int)
         return self
 
     def invert(self):
-        self.img = np.ones(self.img.shape) - self.img
+        self.img = (np.ones(self.img.shape) - self.img).astype(int)
         return self
 
     def save(self):
