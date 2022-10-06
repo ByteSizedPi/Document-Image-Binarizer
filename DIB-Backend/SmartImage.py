@@ -1,86 +1,22 @@
-from re import X
+import math
 import numpy as np
 from math import sqrt
 from numpy.fft import fft2, ifft2
+from matplotlib.pyplot import imsave
+from skimage import feature
 from skimage.filters import threshold_sauvola, threshold_otsu, threshold_mean
 from skimage.color import rgb2gray, gray2rgb
-from skimage.restoration import denoise_bilateral
-from skimage import feature
-from scipy.ndimage import maximum_filter, minimum_filter, gaussian_filter, sobel
-from scipy.signal import convolve2d, gaussian
-from PIL import Image
-from matplotlib.pyplot import imsave
 from skimage.draw import disk
-import time
-
-
-# defB = [
-#     [1, 1, 1],
-#     [1, 1, 1],
-#     [1, 1, 1]
-# ]
-
-# dim = 17
-# B = [[1] * dim for j in range(dim)]
-
-# dim = 17
-# shape = (dim, dim)
-# half = (int)(dim / 2)
-# quart = (int)(half / 2)
-# img = np.zeros(shape, dtype=np.uint8)
-# rr, cc = disk((half, half), quart, shape=shape)
-# img[rr, cc] = 1
-
-def convolve2(func):
-    def wrapper(smartImage, B):
-        img = smartImage.img
-        hw = (int)((len(B) - 1) / 2)
-        hh = (int)((len(B[0]) - 1) / 2)
-        length, width = len(img), len(img[0])
-        B = np.array(B)
-
-        retVal = np.zeros([length, width])
-
-        start = time.perf_counter()
-
-        huh = [arr[i - 3: i + 3] for i, arr in enumerate(img)]
-        print(huh)
-        # for row in range(hh, length - hh):
-        #     for pixel in range(hw, width - hw):
-        #         result = func([arr[pixel-hh:pixel+hh+1]
-        #                        for arr in img[row-hw:row+hw+1]], B)
-        #         if result:
-        #             retVal[row][pixel] = 1
-
-        end = time.perf_counter()
-        print(end - start)
-        return SmartImage(retVal)
-    return wrapper
-
-
-def convolve(func):
-    def wrapper(smartImage, B):
-        img = smartImage.img
-        hw = (int)((len(B) - 1) / 2)
-        hh = (int)((len(B[0]) - 1) / 2)
-        length, width = len(img), len(img[0])
-        B = np.array(B)
-
-        retVal = np.zeros([length, width])
-
-        start = time.perf_counter()
-
-        for row in range(hh, length - hh):
-            for pixel in range(hw, width - hw):
-                result = func([arr[pixel-hh:pixel+hh+1]
-                               for arr in img[row-hw:row+hw+1]], B)
-                if result:
-                    retVal[row][pixel] = 1
-
-        end = time.perf_counter()
-        print(end - start)
-        return SmartImage(retVal)
-    return wrapper
+from skimage.restoration import denoise_wavelet
+from skimage.morphology import skeletonize
+from skimage.filters.rank import noise_filter
+from skimage.morphology import disk
+from skimage.morphology import disk
+from scipy import ndimage
+from scipy.ndimage import maximum_filter, minimum_filter, gaussian_filter, sobel, median_filter
+from scipy.signal import convolve2d, gaussian
+from scipy.ndimage._morphology import distance_transform_edt
+from scipy.ndimage._morphology import binary_closing, binary_opening
 
 
 class SmartImage:
@@ -91,11 +27,24 @@ class SmartImage:
             self.img = img
 
     def binarize(self):
-        self.wiener()
-        contrast = SmartImage(self.img).contrast_gradient()
-        canny = SmartImage(self.img).canny()
-        otsu = SmartImage(self.img).otsu().invert()
-        (contrast & canny | otsu).invert().save()
+        im = SmartImage(self.img).normalize()
+        denoised = im.denoise().wiener().normalize()
+        denoised.save('1. denonised')
+
+        otsu = denoised.otsu()
+        otsu.save('2. otsu_thresholded')
+        stroke_width = (~otsu).avg_stroke_width()
+
+        median = otsu.median_filter(stroke_width)
+        median.save('5. median filter')
+
+        (~((~median) & (~otsu))).save('6. result')
+
+    def normalize(self):
+        max_val = np.max(self.img)
+        min_val = np.min(self.img)
+        norm = (self.img - min_val) / (max_val - min_val)
+        return SmartImage(norm)
 
     def gaussian_kernel(kernel_size=3):
         h = gaussian(kernel_size, kernel_size / 3).reshape(kernel_size, 1)
@@ -115,25 +64,19 @@ class SmartImage:
         # calculate g(x) = f(x) * h(x)
         copy *= kernel
         # return to spatial domain
-        self.img = np.abs(ifft2(copy))
-        return self
-
-    # dilation
-    # @convolve
-    @convolve2
-    def __add__(smartImage, B):
-        return np.mean(np.logical_and(smartImage, B)) > 0
-
-        # erosion
-    @convolve
-    def __sub__(smartImage, B):
-        return np.mean(np.logical_and(smartImage, B)) == 1
+        return SmartImage(np.abs(ifft2(copy)))
 
     def __and__(self, smartImage):
-        return SmartImage(self.img & smartImage.img)
+        return SmartImage(np.logical_and(self.img, smartImage.img))
 
     def __or__(self, smartImage):
         return SmartImage(self.img | smartImage.img)
+
+    def __sub__(self, smartImage):
+        return SmartImage(self.img - smartImage.img)
+
+    def __invert__(self):
+        return SmartImage(np.ones(self.img.shape) - self.img)
 
     def contrast_gradient(self, power=1, thresh=0.1):
         alpha = sqrt(np.var(self.img) / 128) ** power
@@ -141,28 +84,40 @@ class SmartImage:
         Max = maximum_filter(self.img, size=3)
         Min = minimum_filter(self.img, size=3)
         dif = (Max - Min)
-        self.img = alpha * (dif / (Max + Min + epsilon)) + (1 - alpha) * dif
-        self.img[self.img >= thresh] = 1
-        self.img[self.img < thresh] = 0
-        self.img = self.img.astype(int)
-        return self
+        retVal = alpha * (dif / (Max + Min + epsilon)) + (1 - alpha) * dif
+        retVal[retVal >= thresh] = 1
+        retVal[retVal < thresh] = 0
+        retVal = retVal.astype(int)
+        return SmartImage(retVal)
 
     def rgb2gray(self, img):
-        self.img = rgb2gray(img)
-        return self
+        return SmartImage(rgb2gray(img))
 
     def otsu(self):
-        self.img = (self.img > threshold_otsu(self.img)).astype(int)
-        return self
+        return SmartImage((self.img > threshold_otsu(self.img)).astype(int))
 
     def canny(self):
-        self.img = feature.canny(self.img).astype(int)
-        return self
+        return SmartImage(feature.canny(self.img))
 
-    def invert(self):
-        self.img = (np.ones(self.img.shape) - self.img).astype(int)
-        return self
-
-    def save(self):
-        imsave("../DIB-FrontEnd/src/assets/output/output.png",
+    def save(self, name='output'):
+        imsave(f"../DIB-FrontEnd/src/assets/output/{name}.png",
                self.img, cmap='gray')
+
+    def avg_stroke_width(self):
+        distances = distance_transform_edt(self.img)
+        SmartImage(distances).save('3. distance_transform')
+
+        skeleton = skeletonize(self.img)
+        SmartImage(skeleton).save('4. skeletonized')
+
+        d = distances[skeleton]
+
+        stroke_width = np.mean(d) * 2
+        rounded = math.floor(stroke_width) + 1
+        return rounded
+
+    def median_filter(self, size=3):
+        return SmartImage(median_filter(self.img, size=size))
+
+    def denoise(self):
+        return SmartImage(denoise_wavelet(self.img))
