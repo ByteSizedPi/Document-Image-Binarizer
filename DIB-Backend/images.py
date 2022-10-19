@@ -7,4 +7,4 @@ def read(path: str):
 
 
 def getImages():
-    return [read(str(i) + '.bmp') for i in range(1, 12)]
+    return [read(str(i) + '.bmp') for i in range(1, 13)]

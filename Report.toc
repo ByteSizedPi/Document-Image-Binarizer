@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Artefact}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Denoising}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Thresholding}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Text Stroke Width Estimate}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Distance Transform}{3}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Skeletonizing}{4}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Median Filter}{4}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Development Lifecycle}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Research}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Existing Solutions}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Development}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Iterative Approach}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Development of the Artefact}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Denoising}{5}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Wiener Filter}{5}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Wavelet Filter}{5}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Thresholding}{5}{subsection.3.2}%

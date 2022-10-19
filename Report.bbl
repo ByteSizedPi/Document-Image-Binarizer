@@ -1,0 +1,610 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{gatos2006adaptive}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7ecc7063c085b1637b8a44180628decc}{%
+           family={Gatos},
+           familyi={G\bibinitperiod},
+           given={Basilios},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7e09123dde7441c5b06b989697d442b0}{%
+           family={Pratikakis},
+           familyi={P\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e58fd4abbfc3a34396875d9fb6106cd5}{%
+           family={Perantonis},
+           familyi={P\bibinitperiod},
+           given={Stavros\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \strng{fullhash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \strng{bibnamehash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \strng{authorbibnamehash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \strng{authornamehash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \strng{authorfullhash}{30117cca3d2f39722f1b7dccc8ee449e}
+      \field{labelalpha}{GPP06}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern recognition}
+      \field{number}{3}
+      \field{title}{Adaptive degraded document image binarization}
+      \field{volume}{39}
+      \field{year}{2006}
+      \field{pages}{317\bibrangedash 327}
+      \range{pages}{11}
+    \endentry
+    \entry{numpy}{article}{}
+      \name{author}{26}{}{%
+        {{hash=db2b4761cc46be347b418e68660c9554}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=b053969d2c6a9ec8689980fb6463cd56}{%
+           family={Millman},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi Jarrod},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9a5a65a789013a8d1e8035ec28df9b6e}{%
+           family={Walt},
+           familyi={W\bibinitperiod},
+           given={Stéfan\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9fd9ed8466bbb96364ae008f2a665e6e}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4321feefe3d5715c6fe12639d2a1f7f1}{%
+           family={Wieser},
+           familyi={W\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e8d1b0c2bff88b6bf54e2e934e2853f6}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=265437a4424f0b845118651d7d04ab93}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e4d23819637a961e0e598e1c82a8f10d}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Nathaniel\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9ad1d38817acd2f00cb7f324ec7d37ea}{%
+           family={Kern},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8ae844f84614690134ff5d8252fdc430}{%
+           family={Picus},
+           familyi={P\bibinitperiod},
+           given={Matti},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a22828b76006f42d747b699d2ef5167}{%
+           family={Hoyer},
+           familyi={H\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=10aba85d08ce22d724b21878b93f590a}{%
+           family={Kerkwijk},
+           familyi={K\bibinitperiod},
+           given={Marten\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=626cc151613864abeb653c0d8172d98c}{%
+           family={Brett},
+           familyi={B\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a989405517bbf67ae7b16be1d03c0081}{%
+           family={Haldane},
+           familyi={H\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9517b38a3050d34c03ac479ee122f64a}{%
+           family={Río},
+           familyi={R\bibinitperiod},
+           given={Jaime\bibnamedelima Fernández},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           prefix={del},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=76256cb9e4c31e0a4744b1b49a6199f4}{%
+           family={Wiebe},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aac4486f60accb8b7db22ef300423e11}{%
+           family={Gérard-Marchant},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=22fcbc93c38819e962968aad3e3cba7f}{%
+           family={Sheppard},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=fbb0c40f5d70be8ce47ce9daafdf5749}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4c7e4c94b846fa41e2fc0a88e0dc656d}{%
+           family={Weckesser},
+           familyi={W\bibinitperiod},
+           given={Warren},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c588b2e35e75bba896fc5677afb52fa9}{%
+           family={Abbasi},
+           familyi={A\bibinitperiod},
+           given={Hameer},
+           giveni={H\bibinitperiod}}}%
+        {{hash=52e2684c111b194e1f15fa06b0ce4544}{%
+           family={Gohlke},
+           familyi={G\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{754b3dec5e203c19b9a5798bbb902222}
+      \strng{fullhash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \strng{bibnamehash}{754b3dec5e203c19b9a5798bbb902222}
+      \strng{authorbibnamehash}{754b3dec5e203c19b9a5798bbb902222}
+      \strng{authornamehash}{754b3dec5e203c19b9a5798bbb902222}
+      \strng{authorfullhash}{bba1ae456b2655ba67cf6cee2d142dfc}
+      \field{labelalpha}{Har+20}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{9}
+      \field{number}{7825}
+      \field{title}{Array programming with {NumPy}}
+      \field{volume}{585}
+      \field{year}{2020}
+      \field{pages}{357\bibrangedash 362}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/s41586-020-2649-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41586-020-2649-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41586-020-2649-2
+      \endverb
+    \endentry
+    \entry{strokewidth}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=63f39e4a6d5998700109067be61c0d28}{%
+           family={muthukrishnan},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{fullhash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{bibnamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authorbibnamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authornamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authorfullhash}{63f39e4a6d5998700109067be61c0d28}
+      \field{labelalpha}{mut20}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Muthu.co}
+      \field{month}{9}
+      \field{title}{stroke width identification algorithm for text like regions}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
+      \endverb
+      \verb{url}
+      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
+      \endverb
+    \endentry
+    \entry{6524379}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=8d46139dbcfb8d6e298d3be4bb2ad78b}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Asoke},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \strng{fullhash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \strng{bibnamehash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \strng{authorbibnamehash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \strng{authornamehash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \strng{authorfullhash}{8d46139dbcfb8d6e298d3be4bb2ad78b}
+      \field{labelalpha}{Nat13}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 International Conference on Communication Systems and Network Technologies}
+      \field{title}{Image Denoising Algorithms: A Comparative Study of Different Filtration Approaches Used in Image Restoration}
+      \field{year}{2013}
+      \field{pages}{157\bibrangedash 163}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/CSNT.2013.43
+      \endverb
+    \endentry
+    \entry{su2012robust}{article}{}
+      \name{author}{3}{}{%
+        {{hash=eccd3142cc971c04752064bec167da51}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Bolan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=77b9b734f41bfc5642bd9e9e700e7e27}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Shijian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3ef6e25899152486fec63f5d17be44de}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Chew\bibnamedelima Lim},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{2dbea65e5518557f4ff89d4312754f9b}
+      \strng{fullhash}{2dbea65e5518557f4ff89d4312754f9b}
+      \strng{bibnamehash}{2dbea65e5518557f4ff89d4312754f9b}
+      \strng{authorbibnamehash}{2dbea65e5518557f4ff89d4312754f9b}
+      \strng{authornamehash}{2dbea65e5518557f4ff89d4312754f9b}
+      \strng{authorfullhash}{2dbea65e5518557f4ff89d4312754f9b}
+      \field{labelalpha}{SLT12}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on image processing}
+      \field{number}{4}
+      \field{title}{Robust document image binarization technique for degraded document images}
+      \field{volume}{22}
+      \field{year}{2012}
+      \field{pages}{1408\bibrangedash 1417}
+      \range{pages}{10}
+    \endentry
+    \entry{2020SciPy-NMeth}{article}{}
+      \name{author}{35}{}{%
+        {{hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod}}}%
+        {{hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=35bb9c71f55048509a3e9018c349ed73}{%
+           family={Haberland},
+           familyi={H\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fbb0c40f5d70be8ce47ce9daafdf5749}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9fd9ed8466bbb96364ae008f2a665e6e}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=09a667aa6a26526bfcccb2676a494e55}{%
+           family={Burovski},
+           familyi={B\bibinitperiod},
+           given={Evgeni},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4c7e4c94b846fa41e2fc0a88e0dc656d}{%
+           family={Weckesser},
+           familyi={W\bibinitperiod},
+           given={Warren},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7447cb057596bc2645d3980bb04f5c78}{%
+           family={Bright},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1b5d87f5a394ee92a6edb4c1de058cab}{%
+           family={{van der Walt}},
+           familyi={v\bibinitperiod},
+           given={Stéfan\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=626cc151613864abeb653c0d8172d98c}{%
+           family={Brett},
+           familyi={B\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=57849e8550281b202bd611bf6f11e14b}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b053969d2c6a9ec8689980fb6463cd56}{%
+           family={Millman},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi Jarrod},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fbaf80580622bd40577f4a6d38021c0a}{%
+           family={Mayorov},
+           familyi={M\bibinitperiod},
+           given={Nikolay},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7bcf847eaccba039f7a4523540673aea}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelimb R.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4b3d26f886661aa723985bcfd835ba18}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9ad1d38817acd2f00cb7f324ec7d37ea}{%
+           family={Kern},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8d336f110675c46226ece1db501ce712}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=65b1934a87acb0abe09c469aaf11c326}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={C\bibnamedelima J},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9989e8a18827e34b15112d671f52bd35}{%
+           family={Polat},
+           familyi={P\bibinitperiod},
+           given={İlhan},
+           giveni={İ\bibinitperiod}}}%
+        {{hash=b8b88d61c79de60e6e1b5d44e03f5dec}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bf4be16325cb4f641345ca394443fd18}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=0fd9a0e34f1b2adda41357c948d14986}{%
+           family={{VanderPlas}},
+           familyi={V\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c6a95a8ced3b86b4e7e60a74bc6ebf5a}{%
+           family={Laxalde},
+           familyi={L\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=85242652d69220e83cf71ceb8d90a8cb}{%
+           family={Perktold},
+           familyi={P\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5bca159e697db439e23b8947dfa4b614}{%
+           family={Cimrman},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=70b659f5067a8a2efbee66f770681598}{%
+           family={Henriksen},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fa5163c76600eb11a4d07a28f0701cb0}{%
+           family={Quintero},
+           familyi={Q\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=db2b4761cc46be347b418e68660c9554}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=7d86aea5ad1f2b4e27f2f014c71712c2}{%
+           family={Archibald},
+           familyi={A\bibinitperiod},
+           given={Anne\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3876f7c3dbbb1a17823dcd135d07cfc6}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Antônio\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bab4e5caee2d67831e464ce575022b37}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8928c27c900ec0b05492cbba126c5196}{%
+           family={{van Mulbregt}},
+           familyi={v\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aa8bf7a30651c7bc3d20ff02fc843dd9}{%
+           family={{SciPy 1.0 Contributors}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{fullhash}{371a3f5cdbab4f8c68cab2e17d157950}
+      \strng{bibnamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorbibnamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authornamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorfullhash}{371a3f5cdbab4f8c68cab2e17d157950}
+      \field{labelalpha}{Vir+20}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Methods}
+      \field{title}{{{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in Python}}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{pages}{261\bibrangedash 272}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s41592-019-0686-2
+      \endverb
+    \endentry
+    \entry{scikit-image}{article}{}
+      \name{author}{9}{}{%
+        {{hash=761c92228af626556dc841a203fcd005}{%
+           family={Walt},
+           familyi={W\bibinitperiod},
+           given={{S}téfan},
+           giveni={S\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=85c10679ad8f08c2b0ea65e5de627728}{%
+           family={{S}chönberger},
+           familyi={S\bibinitperiod},
+           given={{J}ohannes\bibnamedelima {L}.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=8c435c98f7175eec5cb17c38ccd93512}{%
+           family={{Nunez-Iglesias}},
+           familyi={N\bibinitperiod},
+           given={{J}uan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ad63bb78450d8f1615026773f0e61b12}{%
+           family={{B}oulogne},
+           familyi={B\bibinitperiod},
+           given={{F}rançois},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d13718bc926e5a50cdc7fda8f6286777}{%
+           family={{W}arner},
+           familyi={W\bibinitperiod},
+           given={{J}oshua\bibnamedelima {D}.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=7ca13a2e05997ae75c39fa7996977f43}{%
+           family={{Y}ager},
+           familyi={Y\bibinitperiod},
+           given={{N}eil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c7afdfacfc751650f4ffc8017c917bb1}{%
+           family={{G}ouillart},
+           familyi={G\bibinitperiod},
+           given={{E}mmanuelle},
+           giveni={E\bibinitperiod}}}%
+        {{hash=196b0f9888441e1e638c15e8b8358455}{%
+           family={{Y}u},
+           familyi={Y\bibinitperiod},
+           given={{T}ony},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d5c836f9f3ce9146b97429ccd3b71fcb}{%
+           family={contributors},
+           familyi={c\bibinitperiod},
+           prefix={the\bibnamedelima scikit-image},
+           prefixi={t\bibinitperiod\bibinitdelim s\bibinithyphendelim i\bibinitperiod}}}%
+      }
+      \strng{namehash}{f06b57b7a1ca2a8ed6bdfc1bc02cf7d4}
+      \strng{fullhash}{9ef9a68eebd9a44618b491fd75b1fb78}
+      \strng{bibnamehash}{f06b57b7a1ca2a8ed6bdfc1bc02cf7d4}
+      \strng{authorbibnamehash}{f06b57b7a1ca2a8ed6bdfc1bc02cf7d4}
+      \strng{authornamehash}{f06b57b7a1ca2a8ed6bdfc1bc02cf7d4}
+      \strng{authorfullhash}{9ef9a68eebd9a44618b491fd75b1fb78}
+      \field{labelalpha}{Wal+14}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2167-8359}
+      \field{journaltitle}{PeerJ}
+      \field{month}{6}
+      \field{title}{scikit-image: image processing in {P}ython}
+      \field{volume}{2}
+      \field{year}{2014}
+      \field{pages}{e453}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.7717/peerj.453
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7717/peerj.453
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7717/peerj.453
+      \endverb
+      \keyw{Image processing,Reproducible research,Education,Visualization,Open source,Python,Scientific programming}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
