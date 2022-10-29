@@ -1,17 +1,18 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Report.blg'
-[143] biber-MSWIN32:340> INFO - === 
-[200] Biber.pm:418> INFO - Reading 'Report.bcf'
-[377] Biber.pm:978> INFO - Found 7 citekeys in bib section 0
-[407] Biber.pm:4401> INFO - Processing section 0
-[432] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
-[512] bibtex.pm:1713> INFO - LaTeX decoding ...
-[540] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
-[743] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[744] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[744] Biber.pm:4221> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[744] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[767] bbl.pm:654> INFO - Writing 'Report.bbl' with encoding 'UTF-8'
-[791] bbl.pm:757> INFO - Output to Report.bbl
-[791] Biber.pm:130> WARN - legacy month field 'Sep' in entry 'strokewidth' is not an integer - this will probably not sort properly.
-[791] Biber.pm:132> INFO - WARNINGS: 1
+[165] biber-MSWIN32:340> INFO - === 
+[220] Biber.pm:418> INFO - Reading 'Report.bcf'
+[418] Biber.pm:978> INFO - Found 18 citekeys in bib section 0
+[443] Biber.pm:4401> INFO - Processing section 0
+[462] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
+[538] bibtex.pm:1713> INFO - LaTeX decoding ...
+[588] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
+[889] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[889] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[889] Biber.pm:4221> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[889] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[923] bbl.pm:654> INFO - Writing 'Report.bbl' with encoding 'UTF-8'
+[957] bbl.pm:757> INFO - Output to Report.bbl
+[958] Biber.pm:130> WARN - legacy month field 'Sep' in entry 'strokewidth' is not an integer - this will probably not sort properly.
+[958] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\johan\AppData\Local\Temp\biber_tmp_phEK\8fe4c9854184545302f21ebf0d47516c_8400.utf8, line 178, warning: 3 characters of junk seen at toplevel
+[958] Biber.pm:132> INFO - WARNINGS: 2

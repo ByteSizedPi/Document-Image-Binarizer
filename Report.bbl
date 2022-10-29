@@ -19,6 +19,181 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{angular_2022}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{journaltitle}{Angular.io}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://angular.io/
+      \endverb
+      \verb{url}
+      \verb https://angular.io/
+      \endverb
+    \endentry
+    \entry{ait2022innovative}{article}{}
+      \name{author}{4}{}{%
+        {{hash=415e1a1173368075e906dd2efb000e83}{%
+           family={Ait\bibnamedelima Bella},
+           familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Fatim\bibnamedelima Zahra},
+           giveni={F\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=22b45cc80d5857de5e04d3f7691343fc}{%
+           family={El\bibnamedelima Rhabi},
+           familyi={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=91f4a03e0427daa8a3d66e97ac9a74ce}{%
+           family={Hakim},
+           familyi={H\bibinitperiod},
+           given={Abdelilah},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3d8cfc0b83e914413f91b08d26e53fc6}{%
+           family={Laghrib},
+           familyi={L\bibinitperiod},
+           given={Amine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{33c2097133c33023430a8cd874a35b8a}
+      \strng{fullhash}{e9856da1e1f9ac4df08741b36a3b675c}
+      \strng{bibnamehash}{33c2097133c33023430a8cd874a35b8a}
+      \strng{authorbibnamehash}{33c2097133c33023430a8cd874a35b8a}
+      \strng{authornamehash}{33c2097133c33023430a8cd874a35b8a}
+      \strng{authorfullhash}{e9856da1e1f9ac4df08741b36a3b675c}
+      \field{labelalpha}{Ait+22}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{EURASIP Journal on Advances in Signal Processing}
+      \field{number}{1}
+      \field{title}{An innovative document image binarization approach driven by the non-local p-Laplacian}
+      \field{volume}{2022}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 18}
+      \range{pages}{18}
+    \endentry
+    \entry{Baird2007}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=6c7d47c99a7078ddb457bf2821840875}{%
+           family={Baird},
+           familyi={B\bibinitperiod},
+           given={Henry\bibnamedelima S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=ff6fb10e62a6089a73d7026ed8a184da}{%
+           family={Chaudhuri},
+           familyi={C\bibinitperiod},
+           given={Bidyut\bibnamedelima B.},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Springer London}%
+      }
+      \strng{namehash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{fullhash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{bibnamehash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{authorbibnamehash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{authornamehash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{authorfullhash}{6c7d47c99a7078ddb457bf2821840875}
+      \strng{editorbibnamehash}{ff6fb10e62a6089a73d7026ed8a184da}
+      \strng{editornamehash}{ff6fb10e62a6089a73d7026ed8a184da}
+      \strng{editorfullhash}{ff6fb10e62a6089a73d7026ed8a184da}
+      \field{labelalpha}{Bai07}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Digital Document Processing: Major Directions and Recent Advances}
+      \field{isbn}{978-1-84628-726-8}
+      \field{title}{The State of the Art of Document Image Degradation Modelling}
+      \field{year}{2007}
+      \field{pages}{261\bibrangedash 279}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-1-84628-726-8_12
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-84628-726-8_12
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-84628-726-8_12
+      \endverb
+    \endentry
+    \entry{eskenazi2016stability}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=382ce801d7eec914c262dbdd0d7563dd}{%
+           family={Eskenazi},
+           familyi={E\bibinitperiod},
+           given={Sébastien},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Université de La Rochelle}%
+      }
+      \strng{namehash}{382ce801d7eec914c262dbdd0d7563dd}
+      \strng{fullhash}{382ce801d7eec914c262dbdd0d7563dd}
+      \strng{bibnamehash}{382ce801d7eec914c262dbdd0d7563dd}
+      \strng{authorbibnamehash}{382ce801d7eec914c262dbdd0d7563dd}
+      \strng{authornamehash}{382ce801d7eec914c262dbdd0d7563dd}
+      \strng{authorfullhash}{382ce801d7eec914c262dbdd0d7563dd}
+      \field{labelalpha}{Esk16}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the stability of document analysis algorithms: application to hybrid document hashing technologies}
+      \field{type}{phdthesis}
+      \field{year}{2016}
+    \endentry
+    \entry{gonzalez_woods_pearson_hall}{book}{}
+      \name{author}{4}{}{%
+        {{hash=0a0df2ba89d8ec36b2aafd36b130ed41}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a6a52085d75efa70e8e0ef43f94d6f04}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=74dfb1563967de624b7b25a9d4c8103e}{%
+           family={Pearson},
+           familyi={P\bibinitperiod},
+           given={Prentice},
+           giveni={P\bibinitperiod}}}%
+        {{hash=75002fe48442a02a55971f48cebbe3e4}{%
+           family={Hall},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{28104e5cf6ebb7b2c16f407b8f61f6b4}
+      \strng{fullhash}{86756d819b64010128bd2f6c81f67fa1}
+      \strng{bibnamehash}{28104e5cf6ebb7b2c16f407b8f61f6b4}
+      \strng{authorbibnamehash}{28104e5cf6ebb7b2c16f407b8f61f6b4}
+      \strng{authornamehash}{28104e5cf6ebb7b2c16f407b8f61f6b4}
+      \strng{authorfullhash}{86756d819b64010128bd2f6c81f67fa1}
+      \field{labelalpha}{Gon+}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Digital Image Processing Third Edition Pearson International Edition prepared by Pearson Education}
+      \verb{urlraw}
+      \verb http://sdeuoc.ac.in/sites/default/files/sde_videos/Digital%20Image%20Processing%203rd%20ed.%20-%20R.%20Gonzalez%2C%20R.%20Woods-ilovepdf-compressed.pdf
+      \endverb
+      \verb{url}
+      \verb http://sdeuoc.ac.in/sites/default/files/sde_videos/Digital%20Image%20Processing%203rd%20ed.%20-%20R.%20Gonzalez%2C%20R.%20Woods-ilovepdf-compressed.pdf
+      \endverb
+    \endentry
     \entry{gatos2006adaptive}{article}{}
       \name{author}{3}{}{%
         {{hash=7ecc7063c085b1637b8a44180628decc}{%
@@ -231,6 +406,82 @@
       \verb https://doi.org/10.1038/s41586-020-2649-2
       \endverb
     \endentry
+    \entry{kivunja2017understanding}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0970bba80c067426d4bb9736de051485}{%
+           family={Kivunja},
+           familyi={K\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b04683014ff09573e40143c29eb2a20b}{%
+           family={Kuyini},
+           familyi={K\bibinitperiod},
+           given={Ahmed\bibnamedelima Bawa},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ERIC}%
+      }
+      \strng{namehash}{ed6e1a2e037434229cd278993300cb86}
+      \strng{fullhash}{ed6e1a2e037434229cd278993300cb86}
+      \strng{bibnamehash}{ed6e1a2e037434229cd278993300cb86}
+      \strng{authorbibnamehash}{ed6e1a2e037434229cd278993300cb86}
+      \strng{authornamehash}{ed6e1a2e037434229cd278993300cb86}
+      \strng{authorfullhash}{ed6e1a2e037434229cd278993300cb86}
+      \field{labelalpha}{KK17}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of higher education}
+      \field{number}{5}
+      \field{title}{Understanding and applying research paradigms in educational contexts.}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{pages}{26\bibrangedash 41}
+      \range{pages}{16}
+    \endentry
+    \entry{motwani2004survey}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=aec36ab8c11f33d6f947471ecc93488a}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Mukesh\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=8d584e557709bcab7bd6f30ffd97108f}{%
+           family={Gadiya},
+           familyi={G\bibinitperiod},
+           given={Mukesh\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=14c7537f42a6e9cd0cbfbda75389158a}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Rakhi\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=6e34d43bc297d8b7a5bf9249a6c116e9}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Frederick\bibnamedelima C},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a9c16e663332c993cf79362f8e44e78}
+      \strng{fullhash}{be1dd791b321004bd1adfb472f42c2cb}
+      \strng{bibnamehash}{6a9c16e663332c993cf79362f8e44e78}
+      \strng{authorbibnamehash}{6a9c16e663332c993cf79362f8e44e78}
+      \strng{authornamehash}{6a9c16e663332c993cf79362f8e44e78}
+      \strng{authorfullhash}{be1dd791b321004bd1adfb472f42c2cb}
+      \field{labelalpha}{Mot+04}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of GSPX}
+      \field{title}{Survey of image denoising techniques}
+      \field{volume}{27}
+      \field{year}{2004}
+      \field{pages}{27\bibrangedash 30}
+      \range{pages}{4}
+    \endentry
     \entry{strokewidth}{misc}{}
       \name{author}{1}{}{%
         {{hash=63f39e4a6d5998700109067be61c0d28}{%
@@ -287,6 +538,103 @@
       \verb 10.1109/CSNT.2013.43
       \endverb
     \endentry
+    \entry{nodejs_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4b00bbf4971bea7d45e4ee343c881d44}{%
+           family={Node.js},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{fullhash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{bibnamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authorbibnamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authornamehash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \strng{authorfullhash}{4b00bbf4971bea7d45e4ee343c881d44}
+      \field{labelalpha}{Nod22}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Node.js}
+      \field{title}{Node.js}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://nodejs.org/en/
+      \endverb
+      \verb{url}
+      \verb https://nodejs.org/en/
+      \endverb
+    \endentry
+    \entry{putnam2012philosophy}{book}{}
+      \name{author}{1}{}{%
+        {{hash=38ee782b607fde17380ec448bf0084ef}{%
+           family={Putnam},
+           familyi={P\bibinitperiod},
+           given={Hilary},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Harvard University Press}%
+      }
+      \strng{namehash}{38ee782b607fde17380ec448bf0084ef}
+      \strng{fullhash}{38ee782b607fde17380ec448bf0084ef}
+      \strng{bibnamehash}{38ee782b607fde17380ec448bf0084ef}
+      \strng{authorbibnamehash}{38ee782b607fde17380ec448bf0084ef}
+      \strng{authornamehash}{38ee782b607fde17380ec448bf0084ef}
+      \strng{authorfullhash}{38ee782b607fde17380ec448bf0084ef}
+      \field{labelalpha}{Put12}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Philosophy in an age of science: Physics, mathematics, and skepticism}
+      \field{year}{2012}
+    \endentry
+    \entry{ramanath2005color}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f4938be4c4037d0269f11c0aa6f82ddf}{%
+           family={Ramanath},
+           familyi={R\bibinitperiod},
+           given={Rajeev},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9268091885b566535c38e3add6ff36be}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Wesley\bibnamedelima E},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9b7fe7dbb32dbad3f2cb3efb5de71afd}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Youngjun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a20fab154591d9603d938041e836f378}{%
+           family={Drew},
+           familyi={D\bibinitperiod},
+           given={Mark\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3f81f194a7b50f3cb6b22ef5a2ceba16}
+      \strng{fullhash}{017b244a0f5c218f6f7d33a628aab35b}
+      \strng{bibnamehash}{3f81f194a7b50f3cb6b22ef5a2ceba16}
+      \strng{authorbibnamehash}{3f81f194a7b50f3cb6b22ef5a2ceba16}
+      \strng{authornamehash}{3f81f194a7b50f3cb6b22ef5a2ceba16}
+      \strng{authorfullhash}{017b244a0f5c218f6f7d33a628aab35b}
+      \field{labelalpha}{Ram+05}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Signal Processing Magazine}
+      \field{number}{1}
+      \field{title}{Color image processing pipeline}
+      \field{volume}{22}
+      \field{year}{2005}
+      \field{pages}{34\bibrangedash 43}
+      \range{pages}{10}
+    \endentry
     \entry{su2012robust}{article}{}
       \name{author}{3}{}{%
         {{hash=eccd3142cc971c04752064bec167da51}{%
@@ -326,6 +674,32 @@
       \field{year}{2012}
       \field{pages}{1408\bibrangedash 1417}
       \range{pages}{10}
+    \endentry
+    \entry{smoaca2011id}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=23381e0bf17339d01d56c4e61179cf4e}{%
+           family={Smoaca},
+           familyi={S\bibinitperiod},
+           given={Andreea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Saint-Etienne}%
+      }
+      \strng{namehash}{23381e0bf17339d01d56c4e61179cf4e}
+      \strng{fullhash}{23381e0bf17339d01d56c4e61179cf4e}
+      \strng{bibnamehash}{23381e0bf17339d01d56c4e61179cf4e}
+      \strng{authorbibnamehash}{23381e0bf17339d01d56c4e61179cf4e}
+      \strng{authornamehash}{23381e0bf17339d01d56c4e61179cf4e}
+      \strng{authorfullhash}{23381e0bf17339d01d56c4e61179cf4e}
+      \field{labelalpha}{Smo11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ID Photograph hashing: a global approach}
+      \field{type}{phdthesis}
+      \field{year}{2011}
     \endentry
     \entry{2020SciPy-NMeth}{article}{}
       \name{author}{35}{}{%

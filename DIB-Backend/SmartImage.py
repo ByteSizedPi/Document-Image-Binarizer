@@ -14,8 +14,8 @@ from scipy.signal import convolve2d, wiener
 from scipy.ndimage._morphology import distance_transform_edt
 from matplotlib.image import imread
 
-SIGMA = imread(
-    'C:/Personal/Coding/Angular/DIB/DIB-FrontEnd/src/assets/DIBCO_2016/12.bmp')
+# SIGMA = imread(
+#     'C:/Personal/Coding/Angular/DIB/DIB-FrontEnd/src/assets/DIBCO_2016/12.bmp')
 
 
 def convolve(func):
@@ -46,11 +46,6 @@ class SmartImage:
 
     def mean(self, window=3):
         return SmartImage(convolve2d(self.img, np.array([[1] * window] * window) / 9, boundary='symm', mode='same'))
-
-    def sigma(self):
-        s = SmartImage(SIGMA)
-        # s.img[s.img < 0.0001] = 0.0001
-        return s
 
     @convolve
     def w(img):
