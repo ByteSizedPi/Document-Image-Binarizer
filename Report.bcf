@@ -2386,18 +2386,42 @@
     <bcf:citekey order="35" intorder="1">ait2022innovative</bcf:citekey>
     <bcf:citekey order="36" intorder="1">Baird2007</bcf:citekey>
     <bcf:citekey order="37" intorder="1">Baird2007</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">gonzalez_woods_pearson_hall</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">su2012robust</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">su2012robust</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">numpy</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">scikit-image</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">2020SciPy-NMeth</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">strokewidth</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">scikit-image</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">6524379</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">gatos2006adaptive</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">gatos2006adaptive</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Baird2007</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">gou2007robust</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">lukas2006digital</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">gaussian_image</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">gaussian_image</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">boyat2015review</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">poisson_image</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">poisson_image</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">gonzalez_woods_pearson_hall</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">smith1998characterization</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">smith1998characterization</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">smith1998characterization</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">kieu2012character</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">kieu2012character</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">kieu2012character</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">jin2003adaptive</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">kuan_filter_2022</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">kuan_filter_2022</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">rong2014improved</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">rong2014improved</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">rong2014improved</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">xuan2017improved</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">inproceedings</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">numpy</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">2020SciPy-NMeth</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">6524379</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">scikit-image</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

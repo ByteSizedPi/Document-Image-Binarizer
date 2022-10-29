@@ -25,7 +25,7 @@
     pdfpagemode=FullScreen,
 }
 
-\graphicspath{ {./images} }
+\graphicspath{ {./images}{./resources} }
 
 \title{
     A Composite Technique for Degraded Document Image Binarization \\[12pt]
@@ -162,12 +162,12 @@ The images chosen for testing and demonstrations are provided by \href{https://v
 see addendum A
 
 \chapter{Literature Review}
-This section will discuss the ideas and challenges surrounding the binarization of degraded document images. After discussing the image processing pipeline, the first subsection discusses what degradation is, what its causes are, how modelling is approached and lastly presents some current models.
+This chapter will discuss the ideas and challenges surrounding the binarization of degraded document images. After discussing the image processing pipeline, the first subsection discusses what degradation is, what its causes are, how modelling is approached and lastly presents some current models.
 
 \section{Image Processing Pipeline}
 Image binarization falls into the pre-processing stage where degradation and defects are compensated for. The pre-processing stage forms a pipeline of processes that each modify its input before passing it to the next process in the pipeline. The first of these is called the pre-processing stage where degradation and defects are compensated for~\cite{ramanath2005color}. Since this project is concerned with document images, the binarization of the document also falls into the pre-processing stage.\par
 
-As document image binarization aims to separate the textual content from the background by removing degradations, the first question arises: What does degradation on an image look like and how does one model it?
+Since document image binarization aims to separate the textual content from the background by removing degradations, the first question arises: What does degradation on an image look like and how does one model it?
 
 \section{Document Image Degradation}
 Degradations or defects on a document image refer to any properties of actual document images that deviate from what can be considered the ideal image that reduces the efficiency of image processing systems~\cite{Baird2007}. When paper documents are printed, copied, faxed and scanned, the documents degrade. Even if it seems insignificant to the human eye, this quality loss can reduce the accuracy of even the most cutting-edge text recognition systems (OCR). Additionally, there is mounting evidence that the quantity and representativeness of training sets as well as the feature selection have a considerable impact on the accuracy of stubborn picture pattern recognition tasks~\cite{Baird2007}. Therefore, the performance of these algorithms hinges on the quality of the binarization result. \par
@@ -183,7 +183,6 @@ The physical deterioration of the original document is the main problem in this 
 \subsection{Inevitable Disparities}
 This type of degradation is described by the inevitable physical properties of light, reflection, and the way that scanning devices scan images as well as properties like the resolution of the images. Some of these degradations must be modelled and analysed statistically~\cite{Baird2007}, but for some defects, there are no existing models and are considered roadblocks in the image pre-processing pipeline.
 
-
 \section{Issues With Modelling}
 \cite{Baird2007} notes that the main components affecting the modelling process are:
 \begin{itemize}
@@ -198,9 +197,204 @@ This type of degradation is described by the inevitable physical properties of l
 Document image degradation can be modelled in two main ways. The first is to analyse and model the physical properties of the factors that cause these defects. This can in turn deliver a degradation model based on the workings of the environment that the images are subjected to. Although this method will theoretically yield the most accurate, reliable results, this approach can quickly become overcomplicated as~\cite{Baird2007} points out. The second approach is to model the degradation empirically. This involves developing a model that can replicate the effects of the degradation, disregarding the cause. The main way this is done is by using statistical analysis. Of course, these methods can be combined to form a hybrid model.
 
 \subsection{Noise}
-The devices used to scan documents introduce various forms of noise to the document. Some elementary models include Gaussian noise, Rayleigh noise, Gamma noise, Exponential noise, Uniform noise, and Salt-and-Pepper noise each having a probability density function that describes the distribution of the noise in an image~\cite{gonzalez_woods_pearson_hall}. Since this topic has been the subject of research for a significant amount of time (more than 80 years), existing noise models are very sophisticated and although most models are statistics based, the papers also consider the underlying physical structure of the scanning device in their models such as the scanner model depicted by~\cite{gou2007robust} or the range of noise patterns by imaging sensors modelled by~\cite{lukas2006digital}.\par
+Image noise, which is typically introduced by electrical noise, is the random variation in brightness or colour information in images. It can be created using a scanner or a digital camera's image sensor and circuitry. This unwanted by-product of image capturing known as image noise obscures desired information. The devices used to scan documents introduce various forms of noise to the document. Due to the random nature of noise, it is typically modelled statistically. Since this topic has been the subject of research for a significant amount of time (more than 80 years), existing noise models are very sophisticated and although most models are statistics based, the papers also consider the underlying physical structure of the scanning device in their models such as the scanner model depicted by~\cite{gou2007robust} or the range of noise patterns by imaging sensors modelled by~\cite{lukas2006digital}.\par
 
-Research on image denoising is extensive but can firstly be classified according to which domain the noise is filtered in. Noise removal can either be done in the spatial domain or in the frequency domain. Images must undergo the Fourier Transform to map them onto the frequency domain. In spatial domain filtering there exist some popular methods such as Mean, Wiener and median filtering. Filtering in the frequency domain yields many more opportunities such as filtering in the wavelet domain using linear, non-linear, and other models.
+The following subsections describe common statistical methods used for noise modelling.
+
+\subsubsection{Gaussian Noise}
+The most common type of noise found in images is Gaussian noise. It is an additive noise model.  The probability density function \(p\) of a Gaussian random variable \(z\) is given by
+\[p_{G}(z)=\frac {1}{\sigma {\sqrt {2\pi }}}e^{-{\frac {(z-\mu )^{2}}{2\sigma ^{2}}}}\]
+
+where \(z\) is the pixel intensity, \(\mu\) the mean pixel intensity and \(\sigma\) its standard deviation.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{gaussian distribution.png}
+    \caption{Gaussian PDF with different parameters~\cite{gaussian_image}}
+    \label{fig:gaussian_image}
+\end{figure}
+
+\subsubsection{Impulse Noise (Salt and Pepper Noise)}
+Impulse noise is characterised by sharp and rapid changes in the image signal. It appears as sparsely distributed white and black pixels.
+
+\subsubsection{Shot Noise}
+Shot noise or Poisson noise occurs due to the statistical character of electromagnetic waves and the random fluctuation of photons~\cite{boyat2015review} and is modelled by the Poisson distribution. The Poisson distribution is a function of a discrete random variable X.
+\[P(k)=\frac{\lambda^{k}e^{-\lambda}}{k!}\]
+with \(\lambda > 0\)
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{poisson distribution.png}
+    \caption{Poisson PDF with different parameters~\cite{poisson_image}}
+    \label{fig:poisson_image}
+\end{figure}
+
+Other noise models include Rayleigh noise, Gamma noise, Exponential noise and Uniform noise each having a probability density function that describes the distribution of the noise in an image~\cite{gonzalez_woods_pearson_hall}.\par
+
+Noise can be classified according to which domain it is filtered in. Noise removal can either be done in the spatial domain or the frequency domain. Images must undergo the Fourier Transform to map them onto the frequency domain. In spatial domain filtering there exist some popular methods such as Mean, Wiener and median filtering. Filtering in the frequency domain yields many more opportunities such as filtering in the wavelet domain using linear, non-linear, and other models.
+
+\subsection{Scanner Degradation Model}
+
+An image is scanned by a scanning device using a light-sensitive sensor. This sensor senses the light reflected by the document in some neighbourhood of a pixel in the image close to the sensor. Since the surrounding areas affect the signal received by the sensor, some distortion is introduced that can be modelled. This type of distortion is typically modelled as a Point Spread Function (PSF).~\cite{smith1998characterization} provides a method for estimating a point spread parameter \(\delta_c\) that is dependent on the period of a detected pulse \(\tau\), the width of a square pulse \(\omega\) and some pre-decided thresholding value \(\Theta\), delivering a piecewise function:
+\[
+    \delta(\tau)=
+    \begin{cases}
+        \frac{\tau}{2}             & A \\
+        \omega(\frac{1}{2}-\Theta) & B \\
+        -\frac{\tau}{2}            & C \\
+    \end{cases}
+\]
+A, B and C represent sections of the scanned image with decreasing density (number of black pixel sections and white pixel sections per area). This model is used to generate synthetic characters that mimic the point spread in the signal received by a scanner and is implemented in the training models of classifier systems as well as evaluation benchmarks for OCR.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{scanner.jpg}
+    \caption{Synthetic Characters~\cite{smith1998characterization}}
+    \label{fig:scanner}
+\end{figure}
+
+\subsection{Character Degradation Modelling}
+The most common type of degradation is some sort of distortion of the characters of the document. These common types include ink blotches and smears. This type of degradation is characterised by dark areas over or around a character. The paper by~\cite{kieu2012character} proposes a method that models this as a region of noise, They use a formula that describes a region of noise as an elliptic area wherein a random generation function following the normal distribution \(N(\mu,\sigma x^2)\) is used to generate noise where \(\sigma\) is an input parameter and \(\mu\) is calculated based on pixel values in the segment where the noise will be added.
+
+The results of their model by varying the \(\sigma\) parameter:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{char_degradation.jpg}
+    \caption{Varying the \(\sigma\) parameter~\cite{kieu2012character}}
+    \label{fig:char_degradation}
+\end{figure}
+
+This model sufficiently mimics the defects present in documents affected by natural elements. In the paper, they note that the performance of OCR goes down as the number of defects increases, and as such these artificial characters are also used for training classifier systems.
+
+\section{Implementation}
+
+\subsection{Noise Removal}
+The first step in document binarization is to remove the various forms of noise present in the images. The method used is dependent on the characteristics of the noise identified as using the wrong model will not remove the noise effectively and compromise the quality of the image.
+
+\subsubsection{Median Filter}
+The median filter traverses the pixels of the image and replaces the values of the pixels with the median value in some neighbourhood around the pixel called a window. The grey values inside the window are ordered and the centre pixel’s value is replaced with the median grey value. This technique is nonlinear and highly effective at removing salt-and-pepper noise since sudden jumps in grey value magnitudes are removed. The median filter is however not very computationally efficient since sorting takes a lot of time.
+
+\subsubsection{Wiener Filter}
+Wiener filtering is a popular statistical noise removal method based on minimising the mean square error for stationary Gaussian process~\cite{jin2003adaptive}. By this measure, the wiener filter is the optimal filter.
+The basic model is directed towards finding an estimator \(\hat{x}\) for the original image S that minimises:
+\[MSE(\hat{x})=\frac{1}{N} \sum_{i,j\in S}^{N}(\hat{x}(i,j)-x(i,j))^2\]
+They can be treated as stationary since Gaussian noise is considered globally independent noise. The filter takes two parameters \(\mu\) being the signal mean and \(\sigma^2\) the signal variance. While the global version uses global statistics of the image to minimise the error, the local version is more adaptive and calculates the statistics in different neighbourhoods in the image.
+\par
+
+~\cite{gatos2006adaptive} describes the use of an adaptive wiener filter that makes use of the local properties in an image to reduce noise using the following formula:
+\[I(x,y)=\mu+\frac{(\sigma^2-v^2)(I_{source}-\mu)}{\sigma^2}\]
+where \(\mu\) is the local mean, \(\sigma^2\) the variance in a 3 x 3 window and \(v^2\) is the average variance.
+\par
+The Wiener-Hunt filter is a variation on the original Wiener filter, that transforms the image into the frequency domain first by using the Fourier transform
+\[\hat x = F^\dagger (|\Lambda_H|^2 + \lambda |\Lambda_D|^2)
+    \Lambda_H^\dagger F y\]
+with \(F\) and \(F^\dagger\) the Fourier and inverse Fourier transforms respectively, \(\Lambda_H\) the Fourier transform of the transfer function and \(\lambda\) a damping constant as described by~\cite{scikit-image}.
+
+\subsubsection{Wavelet Filter}
+The wavelet transform decomposes the image into a collection of wavelets. A wavelet is a wave-like function, that has a finite 'energy' and a symmetric area around the x-axis. The transform can be interpreted as the convolution of a set of wavelets over the image that will output a signal proportional to the similarity between the wavelets and the image.
+\[ \int_{-\infty}^{\infty} f(x,y) \cdot g(x,y) \,dx \]
+
+\subsubsection{Kuan Filter}
+By substituting the core pixel with a weighted average of the centre pixel and the mean of the values in a square kernel surrounding the pixel, the Radar Kuan filter determines the value for each pixel. Edge pixel values are duplicated to create enough data to filter pixels close to the image's edges.
+
+The main purpose of this filter is to reduce speckle noise. While reducing the loss of radiometric and textural information, it smooths image data without eliminating edges or sharp features in the images. The multiplicative noise model is initially changed by the Kuan filter into a signal-dependent additive noise model. The model is then subjected to the least mean square error criteria~\cite{kuan_filter_2022}. The smoothed pixel's calculated grey-level value (R) is:
+\[R=xW+\mu(1-W)\]
+where
+\begin{itemize}
+    \item \(x\) is the centre pixel in a neighbourhood
+    \item \(\sigma\)= standard deviation of pixel intensities in the window
+    \item \(\mu\)= mean of the pixel intensities in the window
+    \item \(i=\frac{\sigma}{\mu}\)
+    \item \(u=\sqrt{\frac{1}{number of iterations}}\)
+    \item \(W=\frac{1-\frac{u^2}{i^2}}{1+u^2}\)
+\end{itemize}
+~\cite{kuan_filter_2022}\par
+
+Other Denoising methods were considered such as total-variation denoising and bilateral denoising.
+
+\subsection{Edge Detection}
+Edge detection is a technique in image processing that highlights the boundaries of objects in images by identifying areas with high contrast.
+
+\subsubsection{Variance Edge Detection}
+By calculating the variance of the intensities of pixels in a neighbourhood, one can construct a simple basic edge detector:
+\[S^2=\frac{\sum^N{(x_i-\bar{x})^2}}{N-1}\]
+with $N$ being a dimension of the image
+
+\subsubsection{Canny Edge Detection}
+The Canny edge detection algorithm works as follows:
+\begin{enumerate}
+    \item A Gaussian filter is convolved to remove noise.
+    \item The intensity gradient of the image is calculated by using directional edge operators such as Roberts, Prewitt or Sobel.
+    \item The gradient magnitude is calculated and used as an upper and lower threshold
+    \item Track edges by hysteresis.
+\end{enumerate}
+
+~\cite{rong2014improved} outlines the principal part of the algorithm where the edges are identified by calculating the gradient between pixels. The following first-order partial derivative estimations are used on the original image \(I\) for pixels \(i,j \in I\):
+
+\[E_x(i,j)=\frac{1}{2}(I(i+1,j)-I(i,j)+I(i+1,j+1)-I(i,j+1))\]
+\[E_y(i,j)=\frac{1}{2}(I(i,j+1)-I(i,j)+I(i+1,j+1)-I(i+1,j))\]
+which can also be written in matrix form as
+\[\mathbf{G}_x=\begin{bmatrix}
+        -1 & 1 \\
+        -1 & 1 \\
+    \end{bmatrix},
+    \mathbf{G}_y=\begin{bmatrix}
+        1  & 1  \\
+        -1 & -1 \\
+    \end{bmatrix}
+\]
+
+The magnitude is calculated as
+\[|\mathbf{G}|=\sqrt{\mathbf{G}_x^2+\mathbf{G}_y^2}\]
+and the edge direction as
+\[\Theta=atan2(\mathbf{G}_y,\mathbf{G}_x)\]
+
+~\cite{rong2014improved}identifies some problems with the traditional Canny algorithm. The first is that since the convolution window is a 2x2 matrix, it is sensitive to noise. Seeing that the algorithm uses the partial derivatives in the x and y direction, it is not sensitive to edges oriented $90^{\circ}$ relative to the major axes.\par
+
+Due to this, some augmented methods have been constructed that attempt to solve these issues such as those proposed by~\cite{rong2014improved} and~\cite{xuan2017improved}
+
+\subsubsection{Contrast Edge Detection}
+An image is constructed using a formula for identifying local image contrast as proposed by~\cite{su2012robust}.
+\begin{equation}
+    \label{E:1}
+    C(i,j)=\frac{I_{max}(i,j)-I_{min}(i,j)}{I_{max}(i,j)+I_{min}(i,j)+\epsilon}
+\end{equation}
+where \(\epsilon\) is a positive infinitesimal. The denominator scales the input according to the local range of values, thereby normalizing the contrast across the image~\cite{su2012robust}. Next, a constant \(a\) is calculated:
+\begin{equation}
+    \label{E:2}
+    a=(\frac{\sigma}{128})^\gamma, \; \gamma \geq 0
+\end{equation}
+\(\sigma\) is the standard deviation of the entire document image intensities.
+By combining \ref{E:1} and \ref{E:2} we derive the final equation they use to construct the Gradient image:
+\begin{equation}
+    \label{E:3}
+    C_a(i,j)=a\times C(i,j)+(1-a)(I_{max}(i,j)-I_{min}(i,j))
+\end{equation}
+
+\subsection{Thresholding}
+Thresholding is the technique of converting a grayscale image to black and white by turning just the pixels whose values are higher than a specified threshold into white and the other pixels into black~\cite{inproceedings}. A straightforward method of segmenting images is image thresholding. This is frequently done to segregate "object" or foreground pixels from background pixels by designating pixel intensities one of two values depending on a comparison with a calculated threshold value.
+
+\subsubsection{Binary Thresholding}
+A binary threshold will set all values larger than a calculated threshold value to 1 and all other values to 0.
+\[
+    i(x,y)=
+    \begin{cases}
+        1 & I(x,y) > T    \\
+        0 & I(x,y) \leq T
+    \end{cases}
+\]
+with threshold value $T$
+
+\subsubsection{Otsu's Method}
+Otsu's method is an automatic image thresholding approach. The algorithm returns a single intensity threshold, dividing pixels into the foreground and background classes. This threshold is calculated by optimising for inter-class and intra-class variance.
+
+\subsection{Post Processing}
+After the image has been binarized it can finally be used in OCR programs and other sorts of post-processing endeavours such as stroke analysis and other typographic analysis meant to discover patterns and tendencies in written text such as handwriting recognition and adaptive natural typeface generation.
+
+\section{Conclusion and Closing Remarks}
+This section has discussed a collection of popular techniques and methods used in binarizing document images. A central idea is identified that gets expanded upon in the different papers. All the techniques and models are based on the identification of some pattern following the development of a function that implements the model.
+This project will be testing and evaluating some of the discussed methods as well as new ones should their relevance become apparent. There are some existing libraries for use in the python programming language that have an extensive collection of image processing-related functions. Should any of the necessary functions be missing they will be implemented using their theoretical models.
+After implementing these methods, their performance will be evaluated and compared using the DIBCO 2016 document image dataset. This dataset is comprised of 10 different document images along with 10 ideal images that have no degradation.
 
 
 % ~\cite{gatos2006adaptive} use a low-pass Wiener filter as a first procedure to denoise the image. The Wiener filter produces a noise-reduced image based on the minimum square error measure. The Wiener filter removes background noise effectively but blurs the image significantly. Other noise filtering methods such as Median filters or wavelet domain filters are also popular.
@@ -217,84 +411,84 @@ This artefact, therefore, is a program written in python that receives a documen
 A document image is provided as input and is converted to a grayscale image for processing. This is done by averaging the colour channels of the image into a single channel. It is then passed through a series of steps that each modify it in some way. The process is comprised of four main steps. The images used for testing and
 demonstrations are open-source, provided by \href{https://vc.ee.duth.gr/h-dibco2016/}{DIBCO 2016 Handwritten DocumentDataset}.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{original.png}
-    \captionof{figure}{Original Document Image}
-    \label{fig:1}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{original.png}
+%     \captionof{figure}{Original Document Image}
+%     \label{fig:1}
+% \end{minipage}
 
-\subsection{Denoising}
-After the image is converted to grayscale, the image is denoised. Both low and high-frequency noise is prevalent in most images. The low-frequency noise or coarse noise is filtered by applying the wavelet denoising filter available in the scikit-image library. This filter uses the standard deviation of the intensity values of the image as an input parameter as demonstrated in Figure~\ref{fig:2}.
+% \subsection{Denoising}
+% After the image is converted to grayscale, the image is denoised. Both low and high-frequency noise is prevalent in most images. The low-frequency noise or coarse noise is filtered by applying the wavelet denoising filter available in the scikit-image library. This filter uses the standard deviation of the intensity values of the image as an input parameter as demonstrated in Figure~\ref{fig:2}.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{wavelet difference.png}
-    \captionof{figure}{Noise removed by wavelet filter}
-    \label{fig:2}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{wavelet difference.png}
+%     \captionof{figure}{Noise removed by wavelet filter}
+%     \label{fig:2}
+% \end{minipage}
 
-This is followed by applying a custom adaptive wiener filter that uses a 3x3 gaussian kernel to remove low-frequency gaussian noise (Figure~\ref{fig:3}). Note, at this point, that the image's grey-level intensity values cover a vast range.
+% This is followed by applying a custom adaptive wiener filter that uses a 3x3 gaussian kernel to remove low-frequency gaussian noise (Figure~\ref{fig:3}). Note, at this point, that the image's grey-level intensity values cover a vast range.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{wiener difference.png}
-    \captionof{figure}{Noise removed by wavelet filter}
-    \label{fig:3}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{wiener difference.png}
+%     \captionof{figure}{Noise removed by wavelet filter}
+%     \label{fig:3}
+% \end{minipage}
 
-\subsection{Thresholding}
-Otsu's thresholding method is used to convert the denoised image into a binary image by using .
+% \subsection{Thresholding}
+% Otsu's thresholding method is used to convert the denoised image into a binary image by using .
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{otsu thresholded.png}
-    \captionof{figure}{Otsu thresholded image}
-    \label{fig:4}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{otsu thresholded.png}
+%     \captionof{figure}{Otsu thresholded image}
+%     \label{fig:4}
+% \end{minipage}
 
-\subsection{Text Stroke Width Estimate}
-An estimation of text stroke width will be utilised in the final step. An effective method of doing this as introduced by~\cite{strokewidth} consists of two main steps, namely performing a distance transform and skeletonizing the image.
+% \subsection{Text Stroke Width Estimate}
+% An estimation of text stroke width will be utilised in the final step. An effective method of doing this as introduced by~\cite{strokewidth} consists of two main steps, namely performing a distance transform and skeletonizing the image.
 
-\subsubsection{Distance Transform}
-The distance transform uses the thresholded image and assigns each pixel a value according to its euclidean distance to the closest white pixel (background pixel), thereby creating an image with the brightest pixels in the centre of the text.
+% \subsubsection{Distance Transform}
+% The distance transform uses the thresholded image and assigns each pixel a value according to its euclidean distance to the closest white pixel (background pixel), thereby creating an image with the brightest pixels in the centre of the text.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{distance transform.png}
-    \captionof{figure}{Distance transform}
-    \label{fig:5}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{distance transform.png}
+%     \captionof{figure}{Distance transform}
+%     \label{fig:5}
+% \end{minipage}
 
-\subsubsection{Skeletonizing}
-Skeletonizing an image consists of making multiple passes over an image and detecting the edge pixels. These edge pixels are then removed unless they break the connectivity of the identified object~\cite{scikit-image}.
+% \subsubsection{Skeletonizing}
+% Skeletonizing an image consists of making multiple passes over an image and detecting the edge pixels. These edge pixels are then removed unless they break the connectivity of the identified object~\cite{scikit-image}.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{skeletonized.png}
-    \captionof{figure}{Skeletonizing transform}
-    \label{fig:6}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{skeletonized.png}
+%     \captionof{figure}{Skeletonizing transform}
+%     \label{fig:6}
+% \end{minipage}
 
-The bright pixels in the skeletonized image are then used as indexes for the selection of pixels in the distance-transformed image. The selected pixel values in the distance-transformed image are summed, and averaged to obtain a quantity half of the actual average text stroke width.
+% The bright pixels in the skeletonized image are then used as indexes for the selection of pixels in the distance-transformed image. The selected pixel values in the distance-transformed image are summed, and averaged to obtain a quantity half of the actual average text stroke width.
 
-\subsection{Median Filter}
-Finally, A median filter that uses the calculated stroke width as a parameter passes over the image to remove artefacts on the image smaller than the text stroke to produce the final result.
+% \subsection{Median Filter}
+% Finally, A median filter that uses the calculated stroke width as a parameter passes over the image to remove artefacts on the image smaller than the text stroke to produce the final result.
 
-\noindent
-\begin{minipage}{\linewidth}
-    \centering
-    \includegraphics[width=8cm]{original.png}
-    \includegraphics[width=8cm]{output.png}
-    \captionof{figure}{Original vs Final Binarized Image}
-    \label{fig:7}
-\end{minipage}
+% \noindent
+% \begin{minipage}{\linewidth}
+%     \centering
+%     \includegraphics[width=8cm]{original.png}
+%     \includegraphics[width=8cm]{output.png}
+%     \captionof{figure}{Original vs Final Binarized Image}
+%     \label{fig:7}
+% \end{minipage}
 
 \newpage
 

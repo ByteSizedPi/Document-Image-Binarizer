@@ -23,6 +23,7 @@
       \field{labelalpha}{22}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraalpha}{1}
       \field{journaltitle}{Angular.io}
       \field{year}{2022}
       \verb{urlraw}
@@ -30,6 +31,20 @@
       \endverb
       \verb{url}
       \verb https://angular.io/
+      \endverb
+    \endentry
+    \entry{kuan_filter_2022}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraalpha}{2}
+      \field{journaltitle}{Catalyst.earth}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://catalyst.earth/catalyst-system-files/help/concepts/orthoengine_c/Chapter_824.html
+      \endverb
+      \verb{url}
+      \verb https://catalyst.earth/catalyst-system-files/help/concepts/orthoengine_c/Chapter_824.html
       \endverb
     \endentry
     \entry{ait2022innovative}{article}{}
@@ -126,6 +141,104 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/978-1-84628-726-8_12
+      \endverb
+    \endentry
+    \entry{boyat2015review}{article}{}
+      \name{author}{2}{}{%
+        {{hash=82814a14e5ad462da79e538275b0c1d7}{%
+           family={Boyat},
+           familyi={B\bibinitperiod},
+           given={Ajay\bibnamedelima Kumar},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6af2e7edb7e7a1bfc77ffaab9d961b11}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Brijendra\bibnamedelima Kumar},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{6085412882ca88ca5fe6741440e1550c}
+      \strng{fullhash}{6085412882ca88ca5fe6741440e1550c}
+      \strng{bibnamehash}{6085412882ca88ca5fe6741440e1550c}
+      \strng{authorbibnamehash}{6085412882ca88ca5fe6741440e1550c}
+      \strng{authornamehash}{6085412882ca88ca5fe6741440e1550c}
+      \strng{authorfullhash}{6085412882ca88ca5fe6741440e1550c}
+      \field{labelalpha}{BJ15}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1505.03489}
+      \field{title}{A review paper: noise models in digital image processing}
+      \field{year}{2015}
+    \endentry
+    \entry{gaussian_image}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c2897d4738d8fd643743ca427344b1f3}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{fullhash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{bibnamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authorbibnamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authornamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authorfullhash}{c2897d4738d8fd643743ca427344b1f3}
+      \field{extraname}{1}
+      \field{labelalpha}{Con22}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{10}
+      \field{title}{Normal distribution}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Normal_distribution#/media/File:Normal_Distribution_PDF.svg
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Normal_distribution#/media/File:Normal_Distribution_PDF.svg
+      \endverb
+    \endentry
+    \entry{poisson_image}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c2897d4738d8fd643743ca427344b1f3}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={Wikipedia},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \strng{namehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{fullhash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{bibnamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authorbibnamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authornamehash}{c2897d4738d8fd643743ca427344b1f3}
+      \strng{authorfullhash}{c2897d4738d8fd643743ca427344b1f3}
+      \field{extraname}{2}
+      \field{labelalpha}{Con22}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{10}
+      \field{title}{Poisson distribution}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Poisson_distribution#/media/File:Poisson_pmf.svg
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Poisson_distribution#/media/File:Poisson_pmf.svg
       \endverb
     \endentry
     \entry{eskenazi2016stability}{thesis}{}
@@ -233,6 +346,68 @@
       \field{year}{2006}
       \field{pages}{317\bibrangedash 327}
       \range{pages}{11}
+    \endentry
+    \entry{gou2007robust}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fefbb95aaa63b2b2363972909f291cd4}{%
+           family={Gou},
+           familyi={G\bibinitperiod},
+           given={Hongmei},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3de45cef5e33eef42eab6274f93825a9}{%
+           family={Swaminathan},
+           familyi={S\bibinitperiod},
+           given={Ashwin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=95b6d28f9dd62176f72f62fc7c148126}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {SPIE}%
+      }
+      \strng{namehash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \strng{fullhash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \strng{bibnamehash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \strng{authorbibnamehash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \strng{authornamehash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \strng{authorfullhash}{0f1a0cf57caf9c122332889f7d1cdf97}
+      \field{labelalpha}{GSW07}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Security, steganography, and watermarking of multimedia contents IX}
+      \field{title}{Robust scanner identification based on noise features}
+      \field{volume}{6505}
+      \field{year}{2007}
+      \field{pages}{289\bibrangedash 299}
+      \range{pages}{11}
+    \endentry
+    \entry{inproceedings}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=821a1e9138635328acbcdd717835ca53}{%
+           family={Guruprasad},
+           familyi={G\bibinitperiod},
+           given={Prathima},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{821a1e9138635328acbcdd717835ca53}
+      \strng{fullhash}{821a1e9138635328acbcdd717835ca53}
+      \strng{bibnamehash}{821a1e9138635328acbcdd717835ca53}
+      \strng{authorbibnamehash}{821a1e9138635328acbcdd717835ca53}
+      \strng{authornamehash}{821a1e9138635328acbcdd717835ca53}
+      \strng{authorfullhash}{821a1e9138635328acbcdd717835ca53}
+      \field{labelalpha}{Gur20}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{OVERVIEW OF DIFFERENT THRESHOLDING METHODS IN IMAGE PROCESSING}
+      \field{year}{2020}
     \endentry
     \entry{numpy}{article}{}
       \name{author}{26}{}{%
@@ -406,6 +581,98 @@
       \verb https://doi.org/10.1038/s41586-020-2649-2
       \endverb
     \endentry
+    \entry{jin2003adaptive}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=235e5375465fff85c9d41db9634f33da}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Fu},
+           giveni={F\bibinitperiod}}}%
+        {{hash=becd80fc91500ab9a0d8c3354d996b0d}{%
+           family={Fieguth},
+           familyi={F\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d442af10205f7cf86c1f034144909626}{%
+           family={Winger},
+           familyi={W\bibinitperiod},
+           given={Lowell},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a4a7a45ea31d75f41dbf51f83b6e3b31}{%
+           family={Jernigan},
+           familyi={J\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{eca4703fa33bad68ee95295ea1fed087}
+      \strng{fullhash}{337f4c40d5f17e5c2e727c4bc1e497fb}
+      \strng{bibnamehash}{eca4703fa33bad68ee95295ea1fed087}
+      \strng{authorbibnamehash}{eca4703fa33bad68ee95295ea1fed087}
+      \strng{authornamehash}{eca4703fa33bad68ee95295ea1fed087}
+      \strng{authorfullhash}{337f4c40d5f17e5c2e727c4bc1e497fb}
+      \field{labelalpha}{Jin+03}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 2003 International Conference on Image Processing (Cat. No. 03CH37429)}
+      \field{title}{Adaptive Wiener filtering of noisy images and image sequences}
+      \field{volume}{3}
+      \field{year}{2003}
+      \field{pages}{III\bibrangedash 349}
+      \range{pages}{347}
+    \endentry
+    \entry{kieu2012character}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=6e54bf3bfc9dadc176461c04c7f58a2d}{%
+           family={Kieu},
+           familyi={K\bibinitperiod},
+           given={VC},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e6ae99159b1918193b383a6a77c701d9}{%
+           family={Visani},
+           familyi={V\bibinitperiod},
+           given={Muriel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4320ec0597fb4c8fd30219bb7c57d763}{%
+           family={Journet},
+           familyi={J\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d59b9669be9d14d5e8f5a365556d8c8e}{%
+           family={Domenger},
+           familyi={D\bibinitperiod},
+           given={Jean-Philippe},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=e656a94847b8827f59e31513b1119a54}{%
+           family={Mullot},
+           familyi={M\bibinitperiod},
+           given={Rémy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{32c27011518eb04be6e1438f4175515f}
+      \strng{fullhash}{e0df9b79a25646f8260a4a8811a6060a}
+      \strng{bibnamehash}{32c27011518eb04be6e1438f4175515f}
+      \strng{authorbibnamehash}{32c27011518eb04be6e1438f4175515f}
+      \strng{authornamehash}{32c27011518eb04be6e1438f4175515f}
+      \strng{authorfullhash}{e0df9b79a25646f8260a4a8811a6060a}
+      \field{labelalpha}{Kie+12}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 21st International Conference on Pattern Recognition (ICPR2012)}
+      \field{title}{A character degradation model for grayscale ancient document images}
+      \field{year}{2012}
+      \field{pages}{685\bibrangedash 688}
+      \range{pages}{4}
+    \endentry
     \entry{kivunja2017understanding}{article}{}
       \name{author}{2}{}{%
         {{hash=0970bba80c067426d4bb9736de051485}{%
@@ -440,6 +707,46 @@
       \field{year}{2017}
       \field{pages}{26\bibrangedash 41}
       \range{pages}{16}
+    \endentry
+    \entry{lukas2006digital}{article}{}
+      \name{author}{3}{}{%
+        {{hash=406984a0e2ed9155ca5373538b53536e}{%
+           family={Lukas},
+           familyi={L\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0b7ff038c1a27c940c01a4fd0cc68365}{%
+           family={Fridrich},
+           familyi={F\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fc51bff58ab51b5b547dede064993421}{%
+           family={Goljan},
+           familyi={G\bibinitperiod},
+           given={Miroslav},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cb2c9976bb99fd72341ead6e18567001}
+      \strng{fullhash}{cb2c9976bb99fd72341ead6e18567001}
+      \strng{bibnamehash}{cb2c9976bb99fd72341ead6e18567001}
+      \strng{authorbibnamehash}{cb2c9976bb99fd72341ead6e18567001}
+      \strng{authornamehash}{cb2c9976bb99fd72341ead6e18567001}
+      \strng{authorfullhash}{cb2c9976bb99fd72341ead6e18567001}
+      \field{labelalpha}{LFG06}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Forensics and Security}
+      \field{number}{2}
+      \field{title}{Digital camera identification from sensor pattern noise}
+      \field{volume}{1}
+      \field{year}{2006}
+      \field{pages}{205\bibrangedash 214}
+      \range{pages}{10}
     \endentry
     \entry{motwani2004survey}{inproceedings}{}
       \name{author}{4}{}{%
@@ -481,34 +788,6 @@
       \field{year}{2004}
       \field{pages}{27\bibrangedash 30}
       \range{pages}{4}
-    \endentry
-    \entry{strokewidth}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=63f39e4a6d5998700109067be61c0d28}{%
-           family={muthukrishnan},
-           familyi={m\bibinitperiod}}}%
-      }
-      \strng{namehash}{63f39e4a6d5998700109067be61c0d28}
-      \strng{fullhash}{63f39e4a6d5998700109067be61c0d28}
-      \strng{bibnamehash}{63f39e4a6d5998700109067be61c0d28}
-      \strng{authorbibnamehash}{63f39e4a6d5998700109067be61c0d28}
-      \strng{authornamehash}{63f39e4a6d5998700109067be61c0d28}
-      \strng{authorfullhash}{63f39e4a6d5998700109067be61c0d28}
-      \field{labelalpha}{mut20}
-      \field{sortinit}{m}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Muthu.co}
-      \field{month}{9}
-      \field{title}{stroke width identification algorithm for text like regions}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
-      \endverb
-      \verb{url}
-      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
-      \endverb
     \endentry
     \entry{6524379}{inproceedings}{}
       \name{author}{1}{}{%
@@ -635,6 +914,49 @@
       \field{pages}{34\bibrangedash 43}
       \range{pages}{10}
     \endentry
+    \entry{rong2014improved}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=1b53560e510b9a876eb403f6957d94aa}{%
+           family={Rong},
+           familyi={R\bibinitperiod},
+           given={Weibin},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7d2b5aa98c67e12c10b714d82b03a197}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhanjing},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=25bbf4047d900f3760c65b01ee899dba}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f5957f2cbf5a778b9f8a014814f2f3ab}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Lining},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d9e0e1602cbbcd7b039b92c9c6ed79f1}
+      \strng{fullhash}{bc80f55e7eb79222d8df8ba63838e127}
+      \strng{bibnamehash}{d9e0e1602cbbcd7b039b92c9c6ed79f1}
+      \strng{authorbibnamehash}{d9e0e1602cbbcd7b039b92c9c6ed79f1}
+      \strng{authornamehash}{d9e0e1602cbbcd7b039b92c9c6ed79f1}
+      \strng{authorfullhash}{bc80f55e7eb79222d8df8ba63838e127}
+      \field{labelalpha}{Ron+14}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2014 IEEE international conference on mechatronics and automation}
+      \field{title}{An improved CANNY edge detection algorithm}
+      \field{year}{2014}
+      \field{pages}{577\bibrangedash 582}
+      \range{pages}{6}
+    \endentry
     \entry{su2012robust}{article}{}
       \name{author}{3}{}{%
         {{hash=eccd3142cc971c04752064bec167da51}{%
@@ -674,6 +996,36 @@
       \field{year}{2012}
       \field{pages}{1408\bibrangedash 1417}
       \range{pages}{10}
+    \endentry
+    \entry{smith1998characterization}{article}{}
+      \name{author}{1}{}{%
+        {{hash=284e390b188d50befe6dbf76d9e1b53f}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Elisa\bibnamedelimb H\bibnamedelima Barney},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{284e390b188d50befe6dbf76d9e1b53f}
+      \strng{fullhash}{284e390b188d50befe6dbf76d9e1b53f}
+      \strng{bibnamehash}{284e390b188d50befe6dbf76d9e1b53f}
+      \strng{authorbibnamehash}{284e390b188d50befe6dbf76d9e1b53f}
+      \strng{authornamehash}{284e390b188d50befe6dbf76d9e1b53f}
+      \strng{authorfullhash}{284e390b188d50befe6dbf76d9e1b53f}
+      \field{labelalpha}{Smi98}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern Recognition Letters}
+      \field{number}{13}
+      \field{title}{Characterization of image degradation caused by scanning}
+      \field{volume}{19}
+      \field{year}{1998}
+      \field{pages}{1191\bibrangedash 1197}
+      \range{pages}{7}
     \endentry
     \entry{smoaca2011id}{thesis}{}
       \name{author}{1}{}{%
@@ -977,6 +1329,39 @@
       \verb https://doi.org/10.7717/peerj.453
       \endverb
       \keyw{Image processing,Reproducible research,Education,Visualization,Open source,Python,Scientific programming}
+    \endentry
+    \entry{xuan2017improved}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=de0ce049274e7c4b2ff80283681a9c62}{%
+           family={Xuan},
+           familyi={X\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c7cb1eecde5b465267b7a82afb8bd75a}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{319bae9fd607a8830f6f5505d3ad3836}
+      \strng{fullhash}{319bae9fd607a8830f6f5505d3ad3836}
+      \strng{bibnamehash}{319bae9fd607a8830f6f5505d3ad3836}
+      \strng{authorbibnamehash}{319bae9fd607a8830f6f5505d3ad3836}
+      \strng{authornamehash}{319bae9fd607a8830f6f5505d3ad3836}
+      \strng{authorfullhash}{319bae9fd607a8830f6f5505d3ad3836}
+      \field{labelalpha}{XH17}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 8th IEEE international conference on software engineering and service science (ICSESS)}
+      \field{title}{An improved canny edge detection algorithm}
+      \field{year}{2017}
+      \field{pages}{275\bibrangedash 278}
+      \range{pages}{4}
     \endentry
   \enddatalist
 \endrefsection

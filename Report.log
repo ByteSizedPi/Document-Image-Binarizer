@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  29 OCT 2022 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.11)  29 OCT 2022 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -671,7 +671,7 @@ Package hyperref Info: Link coloring ON on input line 43.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.58 ...{4.1.6}Thresholding}{19}{subsection.4.1.6}
+l.66 ...}Existing Solutions}{20}{subsection.4.1.2}
                                                   % [1
 
 ])
@@ -690,125 +690,65 @@ Chapter 2.
 Chapter 3.
 [11
 
-] [12] [13]
+] [12]
+<./resources/gaussian distribution.png, id=366, 1927.2pt x 1231.60126pt>
+File: ./resources/gaussian distribution.png Graphic file (type png)
+<use ./resources/gaussian distribution.png>
+Package pdftex.def Info: ./resources/gaussian distribution.png  used on input line 212.
+(pdftex.def)             Requested size: 227.62204pt x 145.45547pt.
+<./resources/poisson distribution.png, id=371, 326.21875pt x 251.94125pt>
+File: ./resources/poisson distribution.png Graphic file (type png)
+<use ./resources/poisson distribution.png>
+Package pdftex.def Info: ./resources/poisson distribution.png  used on input line 226.
+(pdftex.def)             Requested size: 227.62204pt x 175.80023pt.
+ [13 <./resources/gaussian distribution.png>]
+<./resources/scanner.jpg, id=398, 453.0015pt x 131.7285pt>
+File: ./resources/scanner.jpg Graphic file (type jpg)
+<use ./resources/scanner.jpg>
+Package pdftex.def Info: ./resources/scanner.jpg  used on input line 250.
+(pdftex.def)             Requested size: 227.62204pt x 66.1897pt.
+ [14 <./resources/poisson distribution.png> <./resources/scanner.jpg>]
+<./resources/char_degradation.jpg, id=414, 248.42813pt x 118.19156pt>
+File: ./resources/char_degradation.jpg Graphic file (type jpg)
+<use ./resources/char_degradation.jpg>
+Package pdftex.def Info: ./resources/char_degradation.jpg  used on input line 262.
+(pdftex.def)             Requested size: 227.62204pt x 108.2939pt.
+ [15 <./resources/char_degradation.jpg>] [16] [17] [18]
 Chapter 4.
-<./images/original.png, id=358, 1091.277pt x 771.1209pt>
-File: ./images/original.png Graphic file (type png)
-<use ./images/original.png>
-Package pdftex.def Info: ./images/original.png  used on input line 222.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
+[19
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 223.
-See the caption package documentation for explanation.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 227.
-
-<./images/wavelet difference.png, id=361, 1091.277pt x 771.1209pt>
-File: ./images/wavelet difference.png Graphic file (type png)
-<use ./images/wavelet difference.png>
-Package pdftex.def Info: ./images/wavelet difference.png  used on input line 233.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 234.
-See the caption package documentation for explanation.
-
-[14
-
- <./images/original.png>]
-<./images/wiener difference.png, id=373, 1091.277pt x 771.1209pt>
-File: ./images/wiener difference.png Graphic file (type png)
-<use ./images/wiener difference.png>
-Package pdftex.def Info: ./images/wiener difference.png  used on input line 243.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 244.
-See the caption package documentation for explanation.
-
-<./images/otsu thresholded.png, id=374, 1091.277pt x 771.1209pt>
-File: ./images/otsu thresholded.png Graphic file (type png)
-<use ./images/otsu thresholded.png>
-Package pdftex.def Info: ./images/otsu thresholded.png  used on input line 254.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 255.
-See the caption package documentation for explanation.
-
-[15 <./images/wavelet difference.png> <./images/wiener difference.png> <./images/otsu thresholded.png>]
-<./images/distance transform.png, id=386, 1091.277pt x 771.1209pt>
-File: ./images/distance transform.png Graphic file (type png)
-<use ./images/distance transform.png>
-Package pdftex.def Info: ./images/distance transform.png  used on input line 268.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 269.
-See the caption package documentation for explanation.
-
-<./images/skeletonized.png, id=388, 1091.277pt x 771.1209pt>
-File: ./images/skeletonized.png Graphic file (type png)
-<use ./images/skeletonized.png>
-Package pdftex.def Info: ./images/skeletonized.png  used on input line 279.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 280.
-See the caption package documentation for explanation.
-
-File: ./images/original.png Graphic file (type png)
-<use ./images/original.png>
-Package pdftex.def Info: ./images/original.png  used on input line 292.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-<./images/output.png, id=389, 1091.277pt x 771.1209pt>
-File: ./images/output.png Graphic file (type png)
-<use ./images/output.png>
-Package pdftex.def Info: ./images/output.png  used on input line 293.
-(pdftex.def)             Requested size: 227.62204pt x 160.83412pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 294.
-See the caption package documentation for explanation.
-
-[16 <./images/distance transform.png> <./images/skeletonized.png>] [17 <./images/output.png>] [18] [19]
-Overfull \hbox (4.73387pt too wide) in paragraph at lines 372--372
+] [20] [21]
+Overfull \hbox (4.73387pt too wide) in paragraph at lines 567--567
 []\OT1/cmr/m/n/12 Charles Kivunja and Ahmed Bawa Kuyini. ``Un-der-stand-ing and ap-ply-ing re-search paradigms
  []
 
-[20
+[22
 
-] [21] (./Report.aux)
+]
+Overfull \hbox (2.15363pt too wide) in paragraph at lines 567--567
+\OT1/cmr/m/it/12 IEEE in-ter-na-tional con-fer-ence on soft-ware en-gi-neer-ing and ser-vice sci-ence (IC-SESS)\OT1/cmr/m/n/12 . IEEE.
+ []
 
-LaTeX Warning: There were undefined references.
-
+[23] (./Report.aux)
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: B75D3A40770C725FC7B43B6D6E352E74;6125.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+(rerunfilecheck)             Checksum: 45EEEE9044E1DE50FFBC667C60DDE08A;6834.
 Package logreq Info: Writing requests to 'Report.run.xml'.
 \openout1 = `Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18664 strings out of 475071
- 332349 string characters out of 5782907
- 1095009 words of memory out of 5000000
- 39763 multiletter control sequences out of 15000+600000
- 477920 words of font info for 58 fonts, out of 8000000 for 9000
+ 18715 strings out of 475071
+ 334076 string characters out of 5782907
+ 1095866 words of memory out of 5000000
+ 39782 multiletter control sequences out of 15000+600000
+ 479381 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,68p,1576b,1439s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Report.pdf (22 pages, 3785175 bytes).
+ 60i,7n,68p,1576b,1518s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Report.pdf (24 pages, 588186 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 568 compressed objects within 6 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
