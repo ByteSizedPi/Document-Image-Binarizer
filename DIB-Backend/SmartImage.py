@@ -69,9 +69,9 @@ class SmartImage:
         self.realBin()
 
     def realBin(self):
-        otsu = self.wiener1(3).save('1. wiener').otsu().save('2. otsu')
+        otsu = self.save('input').wiener1(3).otsu()
         stroke_width = (~otsu).avg_stroke_width()
-        median = otsu.median_filter(stroke_width).save('5. median')
+        median = otsu.median_filter(stroke_width)
         (median | otsu).save()
 
         # binary operations
@@ -163,16 +163,16 @@ class SmartImage:
         return SmartImage(feature.canny(self.img))
 
     def save(self, name='output'):
-        imsave(f"../DIB-FrontEnd/src/assets/output/{name}.png",
+        imsave(f"../DIB-FrontEnd/src/assets/output/16{name}.png",
                self.img, cmap='gray')
         return SmartImage(self.img)
 
     def avg_stroke_width(self):
         distances = distance_transform_edt(self.img)
-        (~SmartImage(distances)).save('3. distance_transform')
+        # (~SmartImage(distances)).save('3. distance_transform')
 
         skeleton = skeletonize(self.img)
-        (~SmartImage(skeleton)).save('4. skeletonized')
+        # (~SmartImage(skeleton)).save('4. skeletonized')
 
         d = distances[skeleton]
 
