@@ -2404,24 +2404,39 @@
     <bcf:citekey order="53" intorder="1">jin2003adaptive</bcf:citekey>
     <bcf:citekey order="54" intorder="1">gatos2006adaptive</bcf:citekey>
     <bcf:citekey order="55" intorder="1">scikit-image</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">kuan_filter_2022</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">wavelet_filtering_2022</bcf:citekey>
     <bcf:citekey order="57" intorder="1">kuan_filter_2022</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">rong2014improved</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">kuan_filter_2022</bcf:citekey>
     <bcf:citekey order="59" intorder="1">rong2014improved</bcf:citekey>
     <bcf:citekey order="60" intorder="1">rong2014improved</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">xuan2017improved</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">rong2014improved</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">xuan2017improved</bcf:citekey>
     <bcf:citekey order="63" intorder="1">su2012robust</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">inproceedings</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">su2012robust</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">su2012robust</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">numpy</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">scikit-image</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">2020SciPy-NMeth</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">6524379</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">gatos2006adaptive</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">gatos2006adaptive</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">inproceedings</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">mdpi_2020</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">mdpi_2020</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">distance_measures</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">distance_measures</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">distance_transform</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">distance_transform</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">numpy</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">2020SciPy-NMeth</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">strokewidth</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">zhang_suen_1984</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">su2012robust</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">6524379</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">gatos2006adaptive</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">scikit-image</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">express</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

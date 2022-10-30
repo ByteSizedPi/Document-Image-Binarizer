@@ -19,6 +19,19 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{express}{misc}{}
+      \field{labelalpha}{17}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{journaltitle}{Expressjs.com}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://expressjs.com/
+      \endverb
+      \verb{url}
+      \verb https://expressjs.com/
+      \endverb
+    \endentry
     \entry{angular_2022}{misc}{}
       \field{labelalpha}{22}
       \field{sortinit}{2}
@@ -33,11 +46,25 @@
       \verb https://angular.io/
       \endverb
     \endentry
-    \entry{kuan_filter_2022}{misc}{}
+    \entry{wavelet_filtering_2022}{misc}{}
       \field{labelalpha}{22}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{extraalpha}{2}
+      \field{journaltitle}{Diffractionlimited.com}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://cdn.diffractionlimited.com/help/maximdl/Wavelet_Filters.htm#:~:text=The%20Wavelet%20Filter%20command%20allows,%2C%20or%20low%2Dfrequency%20detail.
+      \endverb
+      \verb{url}
+      \verb https://cdn.diffractionlimited.com/help/maximdl/Wavelet_Filters.htm#:~:text=The%20Wavelet%20Filter%20command%20allows,%2C%20or%20low%2Dfrequency%20detail.
+      \endverb
+    \endentry
+    \entry{kuan_filter_2022}{misc}{}
+      \field{labelalpha}{22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraalpha}{3}
       \field{journaltitle}{Catalyst.earth}
       \field{year}{2022}
       \verb{urlraw}
@@ -346,6 +373,39 @@
       \field{year}{2006}
       \field{pages}{317\bibrangedash 327}
       \range{pages}{11}
+    \endentry
+    \entry{distance_measures}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a07dee61406b9c48310bff46188c983b}{%
+           family={Grootendorst},
+           familyi={G\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{a07dee61406b9c48310bff46188c983b}
+      \strng{fullhash}{a07dee61406b9c48310bff46188c983b}
+      \strng{bibnamehash}{a07dee61406b9c48310bff46188c983b}
+      \strng{authorbibnamehash}{a07dee61406b9c48310bff46188c983b}
+      \strng{authornamehash}{a07dee61406b9c48310bff46188c983b}
+      \strng{authorfullhash}{a07dee61406b9c48310bff46188c983b}
+      \field{labelalpha}{Gro21}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{2}
+      \field{title}{9 Distance Measures in Data Science | Towards Data Science}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa
+      \endverb
     \endentry
     \entry{gou2007robust}{inproceedings}{}
       \name{author}{3}{}{%
@@ -748,6 +808,37 @@
       \field{pages}{205\bibrangedash 214}
       \range{pages}{10}
     \endentry
+    \entry{mdpi_2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9bd49f4c55bb22330226b8f028fb16c1}{%
+           family={MDPI},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ResearchGate}%
+      }
+      \strng{namehash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \strng{fullhash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \strng{bibnamehash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \strng{authorbibnamehash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \strng{authornamehash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \strng{authorfullhash}{9bd49f4c55bb22330226b8f028fb16c1}
+      \field{labelalpha}{MDP20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{month}{5}
+      \field{title}{Figure 4. The Otsu method visualization.}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/figure/The-Otsu-method-visualization_fig3_341756626
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/figure/The-Otsu-method-visualization_fig3_341756626
+      \endverb
+    \endentry
     \entry{motwani2004survey}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=aec36ab8c11f33d6f947471ecc93488a}{%
@@ -789,6 +880,34 @@
       \field{pages}{27\bibrangedash 30}
       \range{pages}{4}
     \endentry
+    \entry{strokewidth}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=63f39e4a6d5998700109067be61c0d28}{%
+           family={muthukrishnan},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{fullhash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{bibnamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authorbibnamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authornamehash}{63f39e4a6d5998700109067be61c0d28}
+      \strng{authorfullhash}{63f39e4a6d5998700109067be61c0d28}
+      \field{labelalpha}{mut20}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Muthu.co}
+      \field{month}{9}
+      \field{title}{stroke width identification algorithm for text like regions}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
+      \endverb
+      \verb{url}
+      \verb https://muthu.co/stroke-width-identification-algorithm-for-text-like-regions/
+      \endverb
+    \endentry
     \entry{6524379}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=8d46139dbcfb8d6e298d3be4bb2ad78b}{%
@@ -816,6 +935,35 @@
       \verb{doi}
       \verb 10.1109/CSNT.2013.43
       \endverb
+    \endentry
+    \entry{distance_transform}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1beb366f9fa413e40d762cae285a690a}{%
+           family={Nasonov},
+           familyi={N\bibinitperiod},
+           given={A.V.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a5d6c07b78823cdf767763e58a76b235}{%
+           family={Krylov},
+           familyi={K\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \strng{fullhash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \strng{bibnamehash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \strng{authorbibnamehash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \strng{authornamehash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \strng{authorfullhash}{2b2d31468ffdf7b03fdfd8dfa5f3b972}
+      \field{labelalpha}{NK10}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{19th International Conference on Computer Graphics and Vision, GraphiCon'2009 - Conference Proceedings}
+      \field{month}{08}
+      \field{title}{Adaptive Image Deringing}
+      \field{year}{2010}
     \endentry
     \entry{nodejs_2022}{misc}{}
       \name{author}{1}{}{%
@@ -1362,6 +1510,48 @@
       \field{year}{2017}
       \field{pages}{275\bibrangedash 278}
       \range{pages}{4}
+    \endentry
+    \entry{zhang_suen_1984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5bdd31e5b8d0f275170129dd0b42e1d6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={T.\bibnamedelimi Y.},
+           giveni={T\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=849c7c97351f796ca05c8247871b28a5}{%
+           family={Suen},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi Y.},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \strng{fullhash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \strng{bibnamehash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \strng{authorbibnamehash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \strng{authornamehash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \strng{authorfullhash}{e2729bb61f36824bbf8b32ec66698c3e}
+      \field{labelalpha}{ZS84}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{A fast parallel algorithm for thinning digital patterns}
+      \field{volume}{27}
+      \field{year}{1984}
+      \field{pages}{236\bibrangedash 239}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/357994.358023
+      \endverb
+      \verb{urlraw}
+      \verb http://agcggs680.pbworks.com/f/Zhan-Suen_algorithm.pdf
+      \endverb
+      \verb{url}
+      \verb http://agcggs680.pbworks.com/f/Zhan-Suen_algorithm.pdf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

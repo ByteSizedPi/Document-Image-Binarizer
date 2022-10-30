@@ -3,7 +3,9 @@
 \usepackage{graphicx}
 \usepackage{graphics}
 \usepackage[backend=biber,style=alphabetic,]{biblatex}
+\usepackage{listings}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{multicol}
 \usepackage{caption}
 \captionsetup{
@@ -291,7 +293,9 @@ The Wiener-Hunt filter is a variation on the original Wiener filter, that transf
 with \(F\) and \(F^\dagger\) the Fourier and inverse Fourier transforms respectively, \(\Lambda_H\) the Fourier transform of the transfer function and \(\lambda\) a damping constant as described by~\cite{scikit-image}.
 
 \subsubsection{Wavelet Filter}
-The wavelet transform decomposes the image into a collection of wavelets. A wavelet is a wave-like function, that has a finite 'energy' and a symmetric area around the x-axis. The transform can be interpreted as the convolution of a set of wavelets over the image that will output a signal proportional to the similarity between the wavelets and the image.
+The wavelet transform decomposes the image into a collection of wavelets. A wavelet is a wave-like function, that has a finite 'energy' and a symmetric area around the x-axis. The transform can be interpreted as the convolution of a set of wavelets over the image that will output a signal proportional to the similarity between the wavelets and the image.\par
+
+Similar to the Fast Fourier Transform (FFT), a Wavelet transform separates image intensities into frequency components. These components are modified and then transformed back to the spatial domain. The wavelet extends across a finite distance, which gives it an advantage over Fourier approaches~\cite{wavelet_filtering_2022}.
 \[ \int_{-\infty}^{\infty} f(x,y) \cdot g(x,y) \,dx \]
 
 \subsubsection{Kuan Filter}
@@ -385,8 +389,48 @@ A binary threshold will set all values larger than a calculated threshold value 
 \]
 with threshold value $T$
 
+\subsubsection{Niblack's Method}
+The Niblack local thresholding method calculates a threshold $T$ in every neighbourhood around every pixel in the image~\cite{scikit-image}.
+\[T=\mu-k*\sigma\]
+where a chosen $k$ scales the standard deviation parameter $\sigma$
+
+\subsubsection{Sauvola's Method}
+The Sauvola local thresholding method calculates a threshold $T$ in every neighbourhood around every pixel in the image~\cite{scikit-image}. This method is an adaptation of Niblack's method.
+\[T=\mu*\frac{R+k*(\sigma-R)}{R}\]
+where a chosen $k$ scales the standard deviation parameter $\sigma$
+
 \subsubsection{Otsu's Method}
-Otsu's method is an automatic image thresholding approach. The algorithm returns a single intensity threshold, dividing pixels into the foreground and background classes. This threshold is calculated by optimising for inter-class and intra-class variance.
+Otsu's method is an automatic image thresholding approach. The algorithm returns a single intensity threshold, dividing pixels into the foreground and background classes. This threshold is calculated by optimising for inter-class and intra-class variance. The algorithm uses an exhaustive search for the threshold parameter that minimises the intra-class variance defined as:
+\[\sigma_{\omega}^{2}(t)=\omega_0(t)\sigma_0^2(t)+\omega_1(t)\sigma_1^2(t)\]
+with $\omega_0$ and $\omega_1$ the probabilities and $\sigma_0^2$ and $\sigma_1^2$ the variances of the mutually exclusive classes. The threshold is then selected as the maximum value of $\sigma_{\omega}^{2}$.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{otsu.png}
+    \caption{Otsu Visualization~\cite{mdpi_2020}}
+    \label{fig:otsu}
+\end{figure}
+
+\subsection{Other Useful Concepts}
+\subsubsection{Distance Transform}
+The distance transform is applied to a binary image. It then assigns a value to every foreground pixel using some distance measure. Although many different distance measures (briefly illustrated in Figure \ref{fig:distances}) exist, the most used measures are the chessboard or euclidean distance measures.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{distances.png}
+    \caption{Distance Measures~\cite{distance_measures}}
+    \label{fig:distances}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{distance_transform.png}
+    \caption{Distance Transform(Squared Euclidean)~\cite{distance_transform}}
+    \label{fig:dt}
+\end{figure}
+Each foreground pixel intensity is assigned the value of its distance to the closest background pixel.
+\begin{itemize}
+    \item \textbf{Euclidean}: $i(x,y)=\sqrt{bg(x,y)^2+fg(x,y)^2}$
+    \item \textbf{Chessboard}: $i(x,y)=|bg(x,y)|+|fg(x,y)|$
+\end{itemize}
 
 \subsection{Post Processing}
 After the image has been binarized it can finally be used in OCR programs and other sorts of post-processing endeavours such as stroke analysis and other typographic analysis meant to discover patterns and tendencies in written text such as handwriting recognition and adaptive natural typeface generation.
@@ -403,134 +447,151 @@ After implementing these methods, their performance will be evaluated and compar
 
 
 
-\chapter{Description of the Artefact}
+\chapter{Development of the Artefact}
+
+\section{Description of the Artefact}
 The development of this artefact was inspired by the method used by~\cite{su2012robust} for document image binarization. Document Image Binarization, in this context, is a field of study within the phase of image pre-processing where a digital version of a written document is transformed into a binary image, separating the text from the noise, degradation and background~\cite{su2012robust}. Therefore, this artefact had a clear objective, namely, to obtain a digital written document, process the image by removing unwanted artefacts and deliver a binary image containing only the text from the original image.\par
 
 This artefact, therefore, is a program written in python that receives a document image as input and then passes the image through a pipeline of distinct processes, each modifying the image or extracting information about the image for use in the following process. The resulting program uses three main libraries namely \href{https://numpy.org/}{numpy}~\cite{numpy}, \href{https://scikit-image.org/}{scikit-image}~\cite{scikit-image} and \href{https://scikit-image.org/}{scipy}~\cite{2020SciPy-NMeth} in conjunction with custom-developed methods to compose the processes that make up the pipeline. \par
 
-A document image is provided as input and is converted to a grayscale image for processing. This is done by averaging the colour channels of the image into a single channel. It is then passed through a series of steps that each modify it in some way. The process is comprised of four main steps. The images used for testing and
+The process is comprised of four main steps. The images used for testing and
 demonstrations are open-source, provided by \href{https://vc.ee.duth.gr/h-dibco2016/}{DIBCO 2016 Handwritten DocumentDataset}.
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{original.png}
-%     \captionof{figure}{Original Document Image}
-%     \label{fig:1}
-% \end{minipage}
+\subsection{Conversion to Greyscale}
+The testing dataset contains images with three colour channels as well as single colour channel images. To cohere images for processing, each document image is provided as input and is converted to a grayscale image. This is done by averaging the three colour channels of the image into a single channel. The images that are already greyscaled are left intact.
 
-% \subsection{Denoising}
-% After the image is converted to grayscale, the image is denoised. Both low and high-frequency noise is prevalent in most images. The low-frequency noise or coarse noise is filtered by applying the wavelet denoising filter available in the scikit-image library. This filter uses the standard deviation of the intensity values of the image as an input parameter as demonstrated in Figure~\ref{fig:2}.
+\[grey(x)=\frac{r(x)+g(x)+b(x)}{3}\]
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{wavelet difference.png}
-%     \captionof{figure}{Noise removed by wavelet filter}
-%     \label{fig:2}
-% \end{minipage}
+\subsection{Normalizing}
+The images are all greyscale, but their intensity values cover vastly different ranges at different scales. Therefore, the next step is to normalize the intensity values of the image $S$ by scaling them to fall into a range $f:\mathbb{R} \mapsto [0,1]$ and
+\[f(x)=\frac{x-min(S)}{max(S)-min(S)}\]
+for each $x \in S$.
+This does not affect the way the image looks since the \textit{\textbf{imsave}} function in the textit{\textbf{matplotlib}} library automatically rescales the intensity values when the generated image is saved.
 
-% This is followed by applying a custom adaptive wiener filter that uses a 3x3 gaussian kernel to remove low-frequency gaussian noise (Figure~\ref{fig:3}). Note, at this point, that the image's grey-level intensity values cover a vast range.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{original.png}
+    \caption{Original Document Image}
+    \label{fig:1}
+\end{figure}
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{wiener difference.png}
-%     \captionof{figure}{Noise removed by wavelet filter}
-%     \label{fig:3}
-% \end{minipage}
+\subsection{Denoising}
+After the image is converted to grayscale and normalized, the image is denoised. Both low and high-frequency noise is prevalent in most images. The low-frequency noise or coarse noise is filtered by applying the wavelet denoising filter available in the scikit-image library. This filter uses the standard deviation of the intensity values of the image as an input parameter as demonstrated in Figure~\ref{fig:2}.
 
-% \subsection{Thresholding}
-% Otsu's thresholding method is used to convert the denoised image into a binary image by using .
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{wavelet difference.png}
+    \caption{Noise removed by wavelet filter}
+    \label{fig:2}
+\end{figure}
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{otsu thresholded.png}
-%     \captionof{figure}{Otsu thresholded image}
-%     \label{fig:4}
-% \end{minipage}
+This is followed by applying a custom adaptive wiener filter that generates a 3x3 kernel with a centred gaussian distribution. The image undergoes the Fast Fourier Transform (FFT) and then uses the gaussian kernel to convolve over the image; removing low-frequency gaussian noise (Figure~\ref{fig:3}). Lastly, the image is transformed back to the spatial domain. Note, at this point, that the image's grey-level intensity values cover a vast range.
 
-% \subsection{Text Stroke Width Estimate}
-% An estimation of text stroke width will be utilised in the final step. An effective method of doing this as introduced by~\cite{strokewidth} consists of two main steps, namely performing a distance transform and skeletonizing the image.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{wiener difference.png}
+    \caption{Noise removed by Wiener filter}
+    \label{fig:3}
+\end{figure}
 
-% \subsubsection{Distance Transform}
-% The distance transform uses the thresholded image and assigns each pixel a value according to its euclidean distance to the closest white pixel (background pixel), thereby creating an image with the brightest pixels in the centre of the text.
+\subsection{Thresholding}
+Otsu's thresholding method is used to convert the denoised image into a binary image.
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{distance transform.png}
-%     \captionof{figure}{Distance transform}
-%     \label{fig:5}
-% \end{minipage}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{otsu thresholded.png}
+    \caption{Otsu thresholded image}
+    \label{fig:4}
+\end{figure}
 
-% \subsubsection{Skeletonizing}
-% Skeletonizing an image consists of making multiple passes over an image and detecting the edge pixels. These edge pixels are then removed unless they break the connectivity of the identified object~\cite{scikit-image}.
+\subsection{Text Stroke Width Estimate}
+An estimation of text stroke width will be utilised in the final step. An effective method of doing this as introduced by~\cite{strokewidth} consists of two main steps, namely performing a distance transform and then skeletonizing the image.
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{skeletonized.png}
-%     \captionof{figure}{Skeletonizing transform}
-%     \label{fig:6}
-% \end{minipage}
+\subsubsection{Distance Transform}
+The distance transform uses the thresholded image and assigns each pixel a value according to its euclidean distance to the closest white pixel (background pixel), thereby creating an image with the brightest pixels in the centre of the text.
 
-% The bright pixels in the skeletonized image are then used as indexes for the selection of pixels in the distance-transformed image. The selected pixel values in the distance-transformed image are summed, and averaged to obtain a quantity half of the actual average text stroke width.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{distance transform.png}
+    \caption{Distance transform}
+    \label{fig:5}
+\end{figure}
 
-% \subsection{Median Filter}
-% Finally, A median filter that uses the calculated stroke width as a parameter passes over the image to remove artefacts on the image smaller than the text stroke to produce the final result.
+\subsubsection{Skeletonizing}
+Skeletonizing an image consists of making multiple passes over an image and detecting the edge pixels. These edge pixels are then removed unless they break the connectivity of the identified object~\cite{scikit-image}. The implemented method is the Zhang adaptation~\cite{zhang_suen_1984} that traverses the image and removes the boundary and corner points of foreground sections. Doing this iteratively leaves only a 1-pixel-wide skeleton.
 
-% \noindent
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=8cm]{original.png}
-%     \includegraphics[width=8cm]{output.png}
-%     \captionof{figure}{Original vs Final Binarized Image}
-%     \label{fig:7}
-% \end{minipage}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=6cm]{skeletonized.png}
+    \caption{Skeletonizing transform}
+    \label{fig:6}
+\end{figure}
+
+Since the pixels in the middle of each stroke are the furthest away from the background pixels and the skeletonized image contains white pixels only in the centres of the stroke, the indexes of the foreground (bright) pixels in the skeletonized image are iterated in the distance-transformed image. The selected pixel values in the distance-transformed image are summed and averaged to obtain a quantity half of the actual average text stroke width since it measured the distance from the centre of the stroke to the edge of the stroke, therefore half of the actual width.
+
+\subsection{Median Filter}
+Finally, A median filter that uses the calculated stroke width as the window size for convolution passes over the image to remove artefacts on the image smaller than the text stroke to produce the final result.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{original.png}
+    \includegraphics[width=8cm]{output.png}
+    \caption{Original vs Final Binarized Image}
+    \label{fig:7}
+\end{figure}
 
 \newpage
 
 \section{Development Lifecycle}
-The general lifecycle of the development of this project involved the iterative research and testing of multiple existing strategies.
+The project lifecycle consisted of four main phases that were inherently interwoven and iterated.
 
-\subsection{Research}
-The first step in the lifecycle was the research for this project. The research needed to be directed towards gaining an understanding of the problem, the related fields and key terms and jargon related to the problems encountered.
+\subsection{Context}
+The logical positivism research paradigm was well suited for this study since it relies on the acquisition of material text documents that have certain measurable objective properties. These properties include the textual content of the documents as well as the associated artefacts. Unwanted artefacts and degradation can therefore be viewed deterministically i.e., there are external factors that produce these artefacts and an understanding of them can be used to shape empirical models. By using scientific methods such as mathematical and statistical analysis, empirical modelling and experimentation one can analyse the documents and model their properties and dependent factors.
+The research was viewed and planned through this philosophical perspective.\par
+
+\subsection{Comprehension}
+This phase was aimed at acquiring a firm understanding of the research question and the context surrounding it. This required in-depth research on what Document Image Binarization composes and which related topics needed to be explored.
+
+\subsection{Literature Study}
+This phase was the longest and consisted of the exploration of different approaches and solutions to the problems and ideas identified in the previous phase. This also included research on supporting architecture, development platforms, resources and environments in which the research would be conducted and the artefact would be developed.
 
 \subsection{Existing Solutions}
-Once a firm understanding of the field was established, existing solutions were researched and evaluated. This also required an understanding of the surrounding technologies and fundamentals of the methods used.
+Once a firm understanding of the field was established, existing solutions were researched and evaluated. This meant discovering and evaluating different variations on the ideas previously identified.
 
 \subsection{Development}
-Candidate methods, ideas and technoloies were identified and appropriate open source libraries were leveraged where needed. Several methods were implemented, tested and relinquished.
+Candidate methods, ideas and technologies were identified and appropriate open-source libraries were leveraged where needed. Several methods were implemented, tested and relinquished.
 
 \subsection{Iterative Approach}
-Although the main lifecycle of the development of the project was sequential, each step happened iteratively.
+Although the main lifecycle of the development of the project was sequential, the phases were interlinked and were iterated and improved upon during the entire span of this project.
 
-% \section{Development of the Artefact}
-% As a guide for methods relating specifically to document image binarization, two main sources were utilised~\cite{su2012robust}~\cite{gatos2006adaptive}. For general image processing principles and practices \href{https://numpy.org/}{numpy}~\cite{numpy},
-% \href{https://scikit-image.org/}{scikit-image}~\cite{scikit-image} and
-% \href{https://scikit-image.org/}{scipy}~\cite{2020SciPy-NMeth} were invaluable.
+\newpage
 
-\subsection{Denoising}
-\subsubsection{Wiener Filter}
-The Wiener filter is optimal by the mean squared error measure, since it is defined by it. This property along with popular use and consistency of results by ~\cite{6524379}, ~\cite{gatos2006adaptive} makes the wiener filter as well as wavelet filters the obvious choice as candidates for denoising the document images.
+\section{Development of the Artefact}
+\subsection{Comprehension}
+This phase delivered a good grasp of topics in general image processing, as well as specific ideas and solutions for binarizing document images. Two main sources were identified namely~\cite{su2012robust} and ~\cite{gatos2006adaptive} that each provided a functionally distinct scheme for binarizing document images. These sources functioned as groundwork for further topic exploration.
+
+\subsection{Literature Study (Candidate Concepts)}
+This subsection will outline the candidate concepts and ideas in image processing and which problems they solve. These concepts were all implemented and evaluated, but only the most viable solutions were selected.
+
+\subsubsection{Denoising}
+\paragraph{Wiener Filter}
+The Wiener filter is optimal by the mean squared error measure since it is defined by it. This property along with popular use and consistency of results by ~\cite{6524379}, ~\cite{gatos2006adaptive} makes the wiener filter as well as wavelet filters the obvious choice as candidates for denoising the document images.
 \par
 ~\cite{gatos2006adaptive} describes the use of an adaptive wiener filter that makes use of the local properties in an image to reduce noise using the following formula:
 \[I(x,y)=\mu+\frac{(\sigma^2-v^2)(I_{source}-\mu)}{\sigma^2}\]
 where \(\mu\) is the local mean, \(\sigma^2\) the variance in a 3 x 3 window and \(v^2\) is the average variance.
 \par
-The selected algorithm is a variation on the original Wiener filter, called the Wiener-Hunt filter that transforms the image into the freqency domain first by using the fourier transform
+The selected algorithm is a variation on the original Wiener filter, called the Wiener-Hunt filter that transforms the image into the frequency domain first by using the Fourier transform
 \[\hat x = F^\dagger (|\Lambda_H|^2 + \lambda |\Lambda_D|^2)
     \Lambda_H^\dagger F y\]
 with \(F\) and \(F^\dagger\) the Fourier and inverse Fourier transforms respectively, \(\Lambda_H\) the Fourier transform of the transfer function and \(\lambda\) a damping constant as described by~\cite{scikit-image}.
 
-\subsubsection{Wavelet Filter}
-The wavelet transform decomposes the image into a collection of wavelets. A wavelet is a wave-like function, that has a finite 'energy' and symmetric area around the x-axis. The transform can be interpreted as the convolution of a set of wavelets over the image that will output a signal proportional to the similarity between the wavelets and the image.
+\paragraph{Wavelet Filter}
+The wavelet transform decomposes the image into a collection of wavelets. A wavelet is a wave-like function, that has a finite 'energy' and a symmetric area around the x-axis. The transform can be interpreted as the convolution of a set of wavelets over the image that will output a signal proportional to the similarity between the wavelets and the image.
 \[ \int_{-\infty}^{\infty} f(x,y) \cdot g(x,y) \,dx \]
 
 \par
-Other Denoising methods were considered such as total variation denoising and bilateral denoising.
+Other Denoising methods were considered such as total-variation denoising and bilateral denoising.
 
 \subsection{Thresholding}
 
@@ -561,6 +622,39 @@ Other Denoising methods were considered such as total variation denoising and bi
 % \end{figure}
 
 % \subsection{Thresholding}
+
+\subsubsection{Development Platforms and Environments}
+
+\paragraph{Programming Language}
+The selected programming language needed:
+\begin{itemize}
+    \item Comprehensive libraries in support of a wide variety of image processing concepts.
+    \item Comprehensive, comprehensible documentation of the language and relevant libraries.
+    \item Integration with technologies that may make use of the artefact
+    \item To be suitable for processing images.
+    \item To be effective for prototyping and testing.
+\end{itemize}
+
+These constraints were satisfied in the Python and C++ programming languages with libraries such as OpenCV in both languages and additionally python libraries such as \href{https://numpy.org/}{numpy}, \href{https://scikit-image.org/}{scikit-image} and
+\href{https://scikit-image.org/}{scipy}.\par
+
+Both languages were tested. Python was easy to understand and use, but since it is a dynamically typed language debugging was difficult and inefficient. The processing of images is also a highly intensive task, which made the slow execution speed of python scripts noticeable and hindering. The decision was made to switch to C++, but difficulty importing libraries and slow development, prototyping and testing led to the switch back to Python.\par
+
+In the end, Python was suitable for the development and testing of the artefact.
+
+\paragraph{Front-end application}
+Proficient experience in the Angular web framework resulted in it becoming the obvious choice for testing and interfacing with the artefact. This application was very simple and only had the purpose of displaying the test images and the results.
+
+\paragraph{Middelware}
+The front-end application needed a way to run the Document Image Binarization script.
+The Node.js JavaScript runtime was selected to serve and run the script since the \href{https://expressjs.com/}{Express}~\cite{express} library makes this process very simple.
+
+\subsection{Existing Solutions}
+Once a firm understanding of the field was established, existing solutions were researched and evaluated. This meant discovering and evaluating different variations on the ideas previously identified.
+
+\subsection{Development}
+Candidate methods, ideas and technologies were identified and appropriate open-source libraries were leveraged where needed. Several methods were implemented, tested and relinquished.
+
 
 \newpage
 \printbibliography
