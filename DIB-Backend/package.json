@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "marked": "^4.2.3",
+    "ngx-markdown": "^15.0.0"
   }
 }

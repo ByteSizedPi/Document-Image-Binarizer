@@ -100,8 +100,8 @@ omskep dit in 'n binêre beeld.
 \section{Project Description}
 Document Image Binarization is a field of study concerned with the phase of
 image pre-processing where a document image is transformed into a bi-level
-image by separating the text from its background~\cite{su2012robust}. This step
-precedes the transition to higher-level processing endeavours such as OCR.
+image by separating the text from its background~\cite{su2012robust}. This project aimed to produce an artefact as an implementation of a Document Image Binarizing program which takes a digital document image as input and produces a binarized image that can be used in post-processing endeavours. It involved research on collecting, developing and adapting a combination of methods and models that can identify and isolate general characteristics of degraded document images and remove unwanted degradations, noise and artefacts.
+
 
 \section{Problem Description and Background}
 \subsection{Degradation}
@@ -340,6 +340,32 @@ demonstrate an implementation of the chosen methods. \newpage
 
 \section{Project Management and Plan}
 \subsection{Plan}
+\begin{center}
+    \begin{tabular}{ | m{6cm} | m{10cm} | }
+        \hline
+        2 May 2022                          & Submission of research proposal                                                                                                \\
+        \hline
+        3 May 2022 - 25 May 2022            & Broad research and documentation on document image binarization as a pre-processing phase as well as existing implementations. \\
+        \hline
+        26 May 2022 - 29 June 2022          & Comprehensive research on the components of existing document image binarization concepts.
+        Comparative and statistical analysis of these components.
+        Document research and findings in the literature study.                                                                                                              \\
+        \hline
+        30 June 2022                        & Submission of Literature study.                                                                                                \\
+        \hline
+        1 July 2022 - 11 August 2022        & Selection of platforms and resources to be used in the development of the artefact.
+        Development and documentation of an artefact composed of the selected candidate components based on the results of previous analysis.                                \\
+        \hline
+        12 August 2022 - 14 September 2022  & Performance analysis and documentation of the artefact as well as comparative evaluation.                                      \\
+        \hline
+        15 September 2022 - 19 October 2022 & Final adjustments and analysis of the artefact.                                                                                \\
+        \hline
+        20 October 2022                     & Artefact Presentation                                                                                                          \\
+        \hline
+        30 October                          & Project Submission                                                                                                             \\
+        \hline
+    \end{tabular}
+\end{center}
 \subsection{Scope}
 The research of this project will be confined to the binarization of textual
 document images only. The textual content of the documents can be either typed
@@ -1480,6 +1506,23 @@ By applying the proposed method to a range of 10 images provided by
 \end{table}
 
 \chapter{Reflection}
+
+\section{What was learned?}
+During each phase of this project, I realised that there is such a vast amount of research existing on these and related topics and that there is no feasible way to traverse any significant portion of it. Most of the techniques discussed and those not have established research over decades with many great minds and hard work contributing to each concept.\par
+
+What was clear was that the scope of this project was too wide. A more narrowly-focused scope could have delivered some more fundamental knowledge or contribution to the field of image processing. The project consisted of the composition of so many ideas that, inevitably, there was not enough time to cover any of the topics comprehensively. This also meant that most variations on ideas were neglected and rather focused on the basic implementation of the idea.\par
+
+In the future, I would recommend selecting a single image processing concept and doing diligent research on that topic, taking into consideration many existing variations on the idea and its benefits and drawbacks. A set of low-resolution artificial images need to be generated specifically for testing the performance of any given concept instead of applying the concepts to high-resolution intricate degraded document images since the more subtle and even significant details that change in the resulting image can go unnoticed. These low-resolution artificial images will give a more clear visual indication of the performance of the concept.
+
+It was initially assumed that the given documents contained some objective information, but it was quickly realised that that was never the case. Each process the image went through was inherently a balance of tradeoffs. \par
+
+The choice of development environment and programming language was well suited for the project since it was efficient and effective at testing and prototyping. The iterative nature of the research and development was also a comfortably smooth process.
+
+\section{Were the Objectives achieved?}
+Overall, the project can be viewed as a success, since all the objectives were reached. A solid understanding of the field and related topics was grounded, Suitable candidate models were selected and implemented and the resulting artefact produces results not far off from cutting-edge methods that can be implemented on a wide variety of degraded document images.
+
+\section{Project Management and Target Dates}
+The project management was efficient and effective and target dates were met. Although some estimations were not exceptionally accurate, that is to be expected from such a long-term plan.
 
 \newpage
 \printbibliography

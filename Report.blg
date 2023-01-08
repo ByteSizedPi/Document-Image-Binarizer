@@ -1,23 +1,23 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Report.blg'
-[165] biber-MSWIN32:340> INFO - === 
-[216] Biber.pm:418> INFO - Reading 'Report.bcf'
-[409] Biber.pm:978> INFO - Found 36 citekeys in bib section 0
-[433] Biber.pm:4401> INFO - Processing section 0
-[451] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
-[562] bibtex.pm:1713> INFO - LaTeX decoding ...
-[655] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
-[1104] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1104] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1104] Biber.pm:4221> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[1104] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[1169] bbl.pm:654> INFO - Writing 'Report.bbl' with encoding 'UTF-8'
-[1216] bbl.pm:757> INFO - Output to Report.bbl
-[1216] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'gaussian_image' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'poisson_image' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - legacy month field 'May' in entry 'mdpi_2020' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - legacy month field 'Feb' in entry 'distance_measures' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - legacy month field 'Sep' in entry 'strokewidth' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - legacy month field 'Mar' in entry 'zhang_suen_1984' is not an integer - this will probably not sort properly.
-[1216] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\johan\AppData\Local\Temp\biber_tmp_4jXr\8fe4c9854184545302f21ebf0d47516c_4868.utf8, line 157, warning: 3 characters of junk seen at toplevel
-[1216] Biber.pm:132> INFO - WARNINGS: 7
+[176] biber-MSWIN32:340> INFO - === 
+[233] Biber.pm:418> INFO - Reading 'Report.bcf'
+[439] Biber.pm:978> INFO - Found 36 citekeys in bib section 0
+[463] Biber.pm:4401> INFO - Processing section 0
+[483] Biber.pm:4592> INFO - Looking for bibtex file 'refs.bib' for section 0
+[551] bibtex.pm:1713> INFO - LaTeX decoding ...
+[636] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
+[1032] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1032] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1033] Biber.pm:4221> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[1033] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[1090] bbl.pm:654> INFO - Writing 'Report.bbl' with encoding 'UTF-8'
+[1138] bbl.pm:757> INFO - Output to Report.bbl
+[1138] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'gaussian_image' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:130> WARN - legacy month field 'Oct' in entry 'poisson_image' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:130> WARN - legacy month field 'May' in entry 'mdpi_2020' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:130> WARN - legacy month field 'Feb' in entry 'distance_measures' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:130> WARN - legacy month field 'Sep' in entry 'strokewidth' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:130> WARN - legacy month field 'Mar' in entry 'zhang_suen_1984' is not an integer - this will probably not sort properly.
+[1139] Biber.pm:130> WARN - BibTeX subsystem: C:\Users\johan\AppData\Local\Temp\biber_tmp_GPVi\8fe4c9854184545302f21ebf0d47516c_10664.utf8, line 157, warning: 3 characters of junk seen at toplevel
+[1139] Biber.pm:132> INFO - WARNINGS: 7
